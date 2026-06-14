@@ -1,5 +1,4 @@
 import React from "react";
-import logo from "../images/logo3.png";
 import { Link } from "react-router-dom";
 import { FaClock } from "react-icons/fa";
 
