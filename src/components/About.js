@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import bg from "../images/about-us.jpg";
 // import ps from "../images/ps.jpg"
-import at from "../images/at.jpg";
 import isotank from "../images/iso.jpg";
 import bulk from "../images/bulk.jpg";
 // import flexi from "../images/flexi.jpg"
