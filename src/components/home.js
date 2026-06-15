@@ -38,15 +38,26 @@ function Home() {
     AOS.init();
   }, []);
 
+  const products = [
+    { name: "Castor Seed", image: c },
+    { name: "Castor Oil", image: d },
+    { name: "Guar Seeds", image: a },
+    { name: "Guar Gum", image: gg },
+    { name: "Cashew Kernels", image: b },
+    { name: "Pulses", image: e },
+    { name: "Chickpeas", image: j },
+    { name: "Pigeon Peas", image: k },
+  ];
+
   return (
     <div className="w-[100%] h-[100%]  ">
       <Translate />
       <div
-        className="lg:w-[100%] font-bold lg:h-screen lg:flex justify-center bg-cover bg-center bg-no-repeat"
+        className="lg:w-[100%] font-bold h-screen lg:flex justify-center bg-cover bg-center bg-no-repeat relative"
         style={{ backgroundImage: "url(/herobg.png)" }}
       >
         {/* Overlay for better text readability */}
-        <div className="absolute inset-0 bg-black/30"></div>
+        <div className="absolute inset-0 bg-black/20"></div>
         <div
           className="relative z-10 max-w-6xl mx-auto px-4  mt-[8rem]   text-center"
           data-aos="fade-left"
@@ -86,130 +97,56 @@ function Home() {
           OUR PRODUCTS
         </h1>
         <Swiper
-          grabCursor={true}
-          centeredSlides={true}
-          loop={true}
+          grabCursor
+          centeredSlides
+          loop
           autoplay={{
             delay: 2000,
             reverseDirection: true,
+            disableOnInteraction: false,
           }}
-          slidesPerView="4"
-          spaceBetween="1"
-          pagination={{ el: ".swiper-pagination", clickable: true }}
-          coverflowEffect={{
-            rotate: 0,
-            stretch: 0,
-            depth: 250,
-            modifier: 2.5,
-          }}
-          navigation={{
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-            clickable: true,
-            dynamicBullets: false,
-          }}
+          slidesPerView={4}
+          spaceBetween={20}
+          pagination={{ clickable: true }}
+          navigation
           breakpoints={{
             320: {
-              slidesPerView: 2,
-              spaceBetween: 20,
+              slidesPerView: 1,
+              spaceBetween: 15,
             },
             640: {
-              slidesPerView: 2,
-              spaceBetween: 30,
+              slidesPerView: 1,
+              spaceBetween: 20,
             },
             768: {
-              slidesPerView: 3,
+              slidesPerView: 2,
               spaceBetween: 20,
             },
             1024: {
               slidesPerView: 4,
-              spaceBetween: 20,
+              spaceBetween: 25,
             },
           }}
-          modules={[EffectCoverflow, Pagination, Navigation, Autoplay]}
-          className="lg:h-[32rem] text-xl mx-auto w-[100%] flex justify-center mt-6"
+          modules={[Pagination, Navigation, Autoplay]}
+          className="w-full mt-6 "
         >
-          <SwiperSlide className=" w-auto p-4 text-center  items-center rounded-lg m-4 bg-transperant shadow-2xl">
-            <img
-              src={c}
-              alt="none"
-              className="lg:h-[40vh] lg:w-[50vh]  mx-auto"
-            />
-            <p className="sm:text-sm lg:text-4xl xl:text-4xl  font-bold mt-10">
-              Castor Seed
-            </p>
-          </SwiperSlide>
-          <SwiperSlide className=" w-auto p-4 text-center  items-center rounded-lg m-4 bg-transperant shadow-2xl">
-            <img
-              src={d}
-              alt="none"
-              className="lg:h-[40vh] lg:w-[50vh] mx-auto"
-            />
-            <p className="sm:text-sm lg:text-4xl xl:text-4xl  font-bold mt-10">
-              Castor Oil
-            </p>
-          </SwiperSlide>
-          <SwiperSlide className=" w-auto p-4 text-center items-center rounded-lg m-4 bg-transperant shadow-2xl ">
-            <img
-              src={a}
-              alt="None"
-              className="lg:h-[40vh] lg:w-[50vh] mx-auto "
-            />
-            <p className="sm:text-sm lg:text-4xl xl:text-4xl  font-bold mt-10">
-              Guar Seeds
-            </p>
-          </SwiperSlide>
-          <SwiperSlide className=" w-auto p-4 text-center items-center rounded-lg m-4 bg-transperant shadow-2xl ">
-            <img
-              src={gg}
-              alt="None"
-              className="lg:h-[40vh] lg:w-[50vh] mx-auto "
-            />
-            <p className="sm:text-sm lg:text-4xl xl:text-4xl  font-bold mt-10">
-              Guar Gum
-            </p>
-          </SwiperSlide>
-          <SwiperSlide className=" w-auto p-4 text-center  items-center rounded-lg m-4 bg-transperant shadow-2xl">
-            <img
-              src={b}
-              alt="none"
-              className="lg:h-80 xl:h-[40vh] mx-auto lg:w-[50vh]"
-            />
-            <p className="sm:text-sm lg:text-4xl xl:text-4xl  font-bold mt-10">
-              Cashew Kernels
-            </p>
-          </SwiperSlide>
-          <SwiperSlide className=" w-auto p-4 text-center items-center rounded-lg m-4 bg-transperant shadow-2xl">
-            <img
-              src={e}
-              alt="none"
-              className="lg:h-[40vh] lg:w-[50vh] mx-auto"
-            />
-            <p className="sm:text-sm lg:text-4xl xl:text-4xl font-bold mt-10 ">
-              Pulses
-            </p>
-          </SwiperSlide>
+          {products.map((product, index) => (
+            <SwiperSlide key={index}>
+              <div className="bg-white rounded-3xl shadow-xl p-6 h-[450px] flex flex-col">
+                <div className="h-[300px] flex items-center justify-center overflow-hidden">
+                  <img
+                    src={product.image}
+                    alt={product.name}
+                    className="max-w-full max-h-[250px] object-contain"
+                  />
+                </div>
 
-          <SwiperSlide className=" w-auto p-4 text-center items-center rounded-lg m-4 bg-transperant shadow-2xl ">
-            <img
-              src={j}
-              alt="None"
-              className=" lg:h-[40vh] lg:w-[50vh] mx-auto"
-            />
-            <p className="sm:text-sm lg:text-4xl xl:text-4xl  font-bold mt-10">
-              Chickpeas
-            </p>
-          </SwiperSlide>
-          <SwiperSlide className=" w-auto p-4 text-center items-center rounded-lg m-4 bg-transperant shadow-2xl ">
-            <img
-              src={k}
-              alt="None"
-              className="lg:h-[40vh] lg:w-[50vh] mx-auto "
-            />
-            <p className="sm:text-sm lg:text-4xl xl:text-4xl  font-bold mt-10">
-              Pigeon Peas
-            </p>
-          </SwiperSlide>
+                <h3 className="text-center text-2xl font-bold mt-6">
+                  {product.name}
+                </h3>
+              </div>
+            </SwiperSlide>
+          ))}
         </Swiper>
       </div>
 
