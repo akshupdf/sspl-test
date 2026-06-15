@@ -1,211 +1,124 @@
-import c from "../images/castor.jpeg";
-import d from "../images/castor-oil.png";
-import a from "../images/guar.jpeg";
-import gg from "../images/guar-gum.jpeg";
-import b from "../images/cashew.png";
-import e from "../images/pulses.jpeg";
-import j from "../images/peas.jpeg";
-import k from "../images/ppeas.jpeg";
 import { Link } from "react-router-dom";
 import { ToTop } from "./ToTop";
 
+import castorSeed from "../images/castor.jpeg";
+import castorOil from "../images/castor-oil.png";
+import guarSeed from "../images/guar.jpeg";
+import guarGum from "../images/guar-gum.jpeg";
+import cashew from "../images/cashew.png";
+import pulses from "../images/pulses.jpeg";
+import chickpeas from "../images/peas.jpeg";
+import pigeonPeas from "../images/ppeas.jpeg";
+
+const products = [
+  {
+    title: "Castor Seed",
+    image: castorSeed,
+    link: "https://wa.link/hbdcu2",
+    description:
+      "Castor seed is a non-edible oilseed crop, with an average of 46% oil recovery. India is major producing country followed by China, Brazil, and Thailand. Gujarat is major producing state which accounts about 80% of domestic production followed by Andhra Pradesh and Rajasthan.",
+  },
+  {
+    title: "Castor Oil",
+    image: castorOil,
+    link: "https://wa.link/zlu2eo",
+    description:
+      "Castor oil is a vegetable oil pressed from castor beans. Castor oil and its derivatives are used in soaps, lubricants, hydraulic fluids, paints, dyes, coatings, inks, plastics, pharmaceuticals, and perfumes. We export FSG Castor Oil worldwide.",
+  },
+  {
+    title: "Guar Seeds",
+    image: guarSeed,
+    link: "https://wa.link/z39v4j",
+    description:
+      "The guar or cluster bean is an annual legume also known as Cyamopsis Tetragonoloba and the source of guar gum. It is a valuable crop used in agriculture and crop rotation systems.",
+  },
+  {
+    title: "Guar Gum",
+    image: guarGum,
+    link: "https://wa.link/z39v4j",
+    description:
+      "Guar gum is extracted from guar beans. It is used as an emulsifier, thickener, and stabilizer across food, cosmetics, and pharmaceutical industries due to its exceptional thickening properties.",
+  },
+  {
+    title: "Cashew Kernels",
+    image: cashew,
+    link: "https://wa.link/z39v4j",
+    description:
+      "Cashew kernels are one of India's major agricultural exports. They are cultivated across several countries and are widely consumed worldwide due to their nutritional value and versatility.",
+  },
+  {
+    title: "Pulses",
+    image: pulses,
+    link: "https://wa.link/z39v4j",
+    description:
+      "Pulses are edible seeds of legumes and are a vital source of protein worldwide. They are grown extensively for human consumption and also improve soil fertility.",
+  },
+  {
+    title: "Chickpeas",
+    image: chickpeas,
+    link: "https://wa.link/z39v4j",
+    description:
+      "Chickpeas are an annual legume widely known as gram or garbanzo beans. They are rich in protein and are consumed extensively throughout Asia, Europe, and the Americas.",
+  },
+  {
+    title: "Pigeon Peas",
+    image: pigeonPeas,
+    link: "https://wa.link/z39v4j",
+    description:
+      "Pigeon peas are perennial legumes cultivated in tropical and subtropical regions. They are an important food crop in South Asia, Africa, and Latin America.",
+  },
+];
+
 function Product() {
   return (
-    <div className="h-auto bg-[#e1e1e9] w-[100%]">
-      <h1 className="w-[100%] text-center  2xl:text-6xl backdrop-blur-sm pt-2 sm:text-4xl ">
-        {" "}
-        PRODUCTS
-      </h1>
-      <div className="max-w-7xl mx-auto   flex flex-col justify-center ">
-        <div className="w-full xl:flex-row 2xl:flex sm:flex-col flex justify-center m-4 rounded-xl shadow-xl bg-white">
-          <img
-            src={c}
-            alt="Castor Seed"
-            className="w-1/2 h-64 object-contain"
-          />
-          <div className="w-1/2 m-4 flex flex-col justify-center">
-            <h2 className="text-2xl font-bold mb-2">Castor Seed</h2>
-            <p className="text-gray-700 mb-4 text-xl">
-              Castor seed is a non-edible oilseed crop, with an average of 46%
-              oil recovery. India is major producing country followed by China,
-              Brazil, and Thailand. Gujarat is major producing state which
-              accounts about 80% of domestic production followed by Andhra
-              Pradesh and Rajasthan. These 3 states contribute about 96% of
-              total production of India.
-            </p>
-            <button className="bg-green-800 text-white py-2 px-4 rounded hover:bg-green-700 2xl:w-[20vh] xl:w-[40vh]">
-              <Link to="https://wa.link/hbdcu2" target="_blank">
-                Get In Touch
-              </Link>
-            </button>
-          </div>
-        </div>
+    <div className="min-h-screen bg-[#e1e1e9]">
+      <div className="max-w-7xl mx-auto px-4 py-12">
+        <h1 className="text-center text-4xl md:text-5xl lg:text-6xl font-semibold mb-12">
+          PRODUCTS
+        </h1>
 
-        <div className="w-full xl:flex-row 2xl:flex sm:flex-col flex justify-center m-4 shadow-xl rounded-xl bg-white">
-          <img
-            src={d}
-            alt="Castor Oil"
-            className="w-1/2 h-64 object-contain"
-          />
-          <div className="w-1/2 m-4 flex flex-col justify-center">
-            <h2 className="text-2xl font-bold mb-2">Castor Oil</h2>
-            <p className="text-gray-700 mb-4 text-xl">
-              Castor oil is a vegetable oil pressed from castor beans. Castor
-              oil and its derivatives are used in the manufacturing of soaps,
-              lubricants, hydraulic and brake fluids, paints, dyes, coatings,
-              inks, cold resistant plastics, waxes and polishes, nylon,
-              pharmaceuticals, and perfumes. Castor oil enjoys tremendous demand
-              world-wide. We are exporting FSG Castor oil to Europe, UK, USA,
-              and Thailand since 2019, offering basis of FOB / CIF in Bulk, ISO
-              & Flexi tanks.
-            </p>
-            <button className="bg-green-800 text-white py-2 px-4 rounded hover:bg-green-700 2xl:w-[20vh] xl:w-[40vh]">
-              <Link to="https://wa.link/zlu2eo" target="_blank">
-                Get In Touch
-              </Link>
-            </button>
-          </div>
-        </div>
+        <div className="space-y-8">
+          {products.map((product, index) => (
+            <div
+              key={product.title}
+              className={`flex flex-col lg:flex-row bg-white rounded-2xl shadow-lg overflow-hidden`}
+            >
+              {/* Image Section */}
+              <div className="w-full lg:w-[380px] xl:w-[450px] p-6 flex items-center justify-center">
+                <div className="w-full h-[280px] md:h-[320px] border border-gray-200 rounded-xl bg-gray-50 flex items-center justify-center">
+                  <img
+                    src={product.image}
+                    alt={product.title}
+                    className="max-w-full max-h-full object-contain p-4"
+                  />
+                </div>
+              </div>
 
-        <div className="w-full xl:flex-row 2xl:flex sm:flex-col flex justify-center m-4 shadow-xl rounded-xl bg-white">
-          <img
-            src={a}
-            alt="Guar Seeds"
-            className="w-1/2 h-64 object-contain rounded-lg"
-          />
-          <div className="w-1/2 m-4 flex flex-col justify-center">
-            <h2 className="text-2xl font-bold mb-2">Guar Seeds</h2>
-            <p className="text-gray-700 mb-4 text-xl">
-              The guar or cluster bean is an annual legume also known as
-              Cyamopsis Tetragonoloba and the source of guar gum. It is also
-              known as gavar, guwar or guvar bean. This legume is a valuable
-              plant in a crop rotation cycle, as it lives in symbiosis with
-              nitrogen-fixing bacteria. Agriculturists in semi-arid regions of
-              Rajasthan follow crop-rotation and use guar to.
-            </p>
-            <button className="bg-green-800 text-white py-2 px-4 rounded hover:bg-green-700 2xl:w-[20vh] xl:w-[40vh]">
-              <Link to="https://wa.link/z39v4j" target="_blank">
-                Get In Touch
-              </Link>
-            </button>
-          </div>
-        </div>
+              {/* Content Section */}
+              <div className="flex-1 p-6 lg:p-10 flex flex-col justify-center">
+                <h2 className="text-2xl lg:text-3xl font-semibold mb-4">
+                  {product.title}
+                </h2>
 
-        <div className="w-full xl:flex-row 2xl:flex sm:flex-col flex justify-center m-4 shadow-xl rounded-xl bg-white">
-          <img
-            src={gg}
-            alt="Guar Gum"
-            className="w-1/2 h-64 object-contain rounded-lg"
-          />
-          <div className="w-1/2 m-4 flex flex-col justify-center">
-            <h2 className="text-2xl font-bold mb-2">Guar Gum</h2>
-            <p className="text-gray-700 mb-4 text-xl">
-              Guar gum is extracted from guar bean. Guar gum is basically a
-              polysaccharide composed of the galactose and mannose. Guar gum is
-              used as emulsifier, thickener, and stabilizer with wide range of
-              industrial applications especially in food, cosmetics, and
-              pharmaceuticals. Guar gum is very economical in comparison to
-              other thickening agents. It shows almost 8 times the water
-              thickening properties than starch.{" "}
-            </p>
-            <button className="bg-green-800 text-white py-2 px-4 rounded hover:bg-green-700 2xl:w-[20vh] xl:w-[40vh]">
-              <Link to="https://wa.link/z39v4j" target="_blank">
-                Get In Touch
-              </Link>
-            </button>
-          </div>
-        </div>
+                <p className="text-gray-600 text-base lg:text-lg leading-relaxed mb-6">
+                  {product.description}
+                </p>
 
-        <div className="w-full xl:flex-row 2xl:flex sm:flex-col flex justify-center m-4 shadow-xl rounded-xl bg-white">
-          <img
-            src={b}
-            alt="Cashew Kernels"
-            className="w-1/2 h-64 object-contain rounded-lg p-10"
-          />
-          <div className="w-1/2 m-4 flex flex-col justify-center">
-            <h2 className="text-2xl font-bold mb-2">Cashew Kernels</h2>
-            <p className="text-gray-700 mb-4 text-xl ">
-              The Cashew tree, Anacardium occidentale, generally considered the
-              native to the northern part of South America. Today, cashews are
-              cultivated in several countries, including India, Vietnam, Brazil,
-              and Africa. India remains one of the leading producers and
-              exporters of cashews globally, with a diverse range of cashew
-              products.
-            </p>
-            <button className="bg-green-800 text-white py-2 px-4 rounded hover:bg-green-700 2xl:w-[20vh] xl:w-[40vh]">
-              <Link to="https://wa.link/z39v4j" target="_blank">
-                Get In Touch
-              </Link>
-            </button>
-          </div>
-        </div>
-
-        <div className="w-full xl:flex-row 2xl:flex sm:flex-col flex justify-center m-4 shadow-xl rounded-xl bg-white">
-          <img
-            src={e}
-            alt="Pulses"
-            className="w-1/2 h-64 object-contain"
-          />
-          <div className="w-1/2 m-4 flex flex-col justify-center">
-            <h2 className="text-2xl font-bold mb-2">Pulses</h2>
-            <p className="text-gray-700 mb-4 text-xl">
-              Legumes are plants in the family Fabaceae, or the fruit or seeds
-              of such plants. When used as a dry grain for human consumption,
-              the seeds are also called pulses. Legumes are grown
-              agriculturally, primarily for human consumption; for livestock
-              forage and silage; and as soil-enhancing green manure .
-            </p>
-            <button className="bg-green-800 text-white py-2 px-4 rounded hover:bg-green-700 2xl:w-[20vh] xl:w-[40vh]">
-              <Link to="https://wa.link/z39v4j" target="_blank">
-                Get In Touch
-              </Link>
-            </button>
-          </div>
-        </div>
-        <div className="w-full xl:flex-row 2xl:flex sm:flex-col flex justify-center m-4 shadow-xl rounded-xl bg-white">
-          <img
-            src={j}
-            alt="Chickpeas"
-            className="w-1/2 h-64 object-contain"
-          />
-          <div className="w-1/2 m-4 flex flex-col justify-center">
-            <h2 className="text-2xl font-bold mb-2">Chickpeas</h2>
-            <p className="text-gray-700 mb-4 text-xl">
-              The chickpea or chick pea is an annual legume of the family
-              Fabaceae, subfamily Faboideae. Its different types are variously
-              known as gram or Bengal gram, chhola, chhana, chana, or channa,
-              garbanzo or garbanzo bean, or Egyptian pea.{" "}
-            </p>
-            <button className="bg-green-800 text-white py-2 px-4 rounded hover:bg-green-700 2xl:w-[20vh] xl:w-[40vh]">
-              <Link to="https://wa.link/z39v4j" target="_blank">
-                Get In Touch
-              </Link>
-            </button>
-          </div>
-        </div>
-        <div className="w-full xl:flex-row 2xl:flex sm:flex-col flex justify-center m-4 shadow-xl rounded-xl bg-white">
-          <img
-            src={k}
-            alt="Pigeon Peas"
-            className="w-1/2 h-64 object-contain"
-          />
-          <div className="w-1/2 m-4 flex flex-col justify-center">
-            <h2 className="text-2xl font-bold mb-2">Pigeon Peas</h2>
-            <p className="text-gray-700 mb-4 text-xl">
-              The pigeon pea is a perennial legume from the family Fabaceae
-              native to the Eastern Hemisphere. The pigeon pea is widely
-              cultivated in tropical and semitropical regions around the world,
-              being commonly consumed in South Asia, Southeast Asia, Africa,
-              Latin America, and the Caribbean.{" "}
-            </p>
-            <button className="bg-green-800 text-white py-2 px-4 rounded hover:bg-green-700 2xl:w-[20vh] xl:w-[40vh]">
-              <Link to="https://wa.link/z39v4j" target="_blank">
-                Get In Touch
-              </Link>
-            </button>
-          </div>
+                <div>
+                  <Link
+                    to={product.link}
+                    target="_blank"
+                    className="inline-flex items-center justify-center px-6 py-3 bg-green-800 text-white rounded-lg hover:bg-green-700 transition-colors"
+                  >
+                    Get In Touch
+                  </Link>
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
+
       <ToTop />
     </div>
   );
