@@ -82,12 +82,6 @@ function Home() {
             >
               <span>Discover Our Story</span>
             </Link>
-            <Link
-              to="/products"
-              className="group inline-flex items-center justify-center px-10 py-5 text-lg font-bold text-white bg-black/30 backdrop-blur-sm border-2 border-white/30 rounded-xl shadow-xl hover:bg-black/40 transition-all duration-500 hover:shadow-2xl hover:scale-105"
-            >
-              <span>Explore Products</span>
-            </Link>
           </div>
         </div>
       </div>
@@ -98,52 +92,46 @@ function Home() {
         </h1>
         <Swiper
           grabCursor
-          centeredSlides
           loop
           autoplay={{
-            delay: 2000,
-            reverseDirection: true,
+            delay: 2500,
             disableOnInteraction: false,
           }}
-          slidesPerView={4}
-          spaceBetween={20}
-          pagination={{ clickable: true }}
-          navigation
+          centeredSlides={false}
+          spaceBetween={24}
           breakpoints={{
             320: {
               slidesPerView: 1,
-              spaceBetween: 15,
             },
             640: {
-              slidesPerView: 1,
-              spaceBetween: 20,
-            },
-            768: {
               slidesPerView: 2,
-              spaceBetween: 20,
             },
             1024: {
+              slidesPerView: 3,
+            },
+            1280: {
               slidesPerView: 4,
-              spaceBetween: 25,
             },
           }}
           modules={[Pagination, Navigation, Autoplay]}
-          className="w-full mt-6 "
+          className="w-full mt-8"
         >
-          {products.map((product, index) => (
-            <SwiperSlide key={index}>
-              <div className="bg-white rounded-3xl shadow-xl p-6 h-[450px] flex flex-col">
-                <div className="h-[300px] flex items-center justify-center overflow-hidden">
+          {products.map((product) => (
+            <SwiperSlide key={product.name}>
+              <div className="bg-white rounded-3xl shadow-xl p-5 h-[420px] flex flex-col">
+                <div className="h-[260px] w-full border border-gray-200 rounded-2xl bg-gray-50 flex items-center justify-center p-4">
                   <img
                     src={product.image}
                     alt={product.name}
-                    className="max-w-full max-h-[250px] object-contain"
+                    className="w-full h-full object-contain"
                   />
                 </div>
 
-                <h3 className="text-center text-2xl font-bold mt-6">
-                  {product.name}
-                </h3>
+                <div className="flex-1 flex items-center justify-center">
+                  <h3 className="text-center text-xl lg:text-2xl font-semibold">
+                    {product.name}
+                  </h3>
+                </div>
               </div>
             </SwiperSlide>
           ))}
