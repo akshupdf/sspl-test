@@ -4,25 +4,20 @@ import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import {
-  EffectCoverflow,
-  Pagination,
-  Navigation,
-  Autoplay,
-} from "swiper/modules";
+import { Pagination, Navigation, Autoplay } from "swiper/modules";
 import rib from "../images/rib2.png";
-import a from "../images/guar.jpeg";
-import b from "../images/cashew.png";
-import c from "../images/castor.jpeg";
-import d from "../images/castor-oil.png";
-import e from "../images/pulses.jpeg";
-import j from "../images/peas.jpeg";
-import k from "../images/ppeas.jpeg";
+import a from "../images/guar-seed-home.jpeg";
+import b from "../images/cashew-home.jpeg";
+import c from "../images/castor-home.jpeg";
+import d from "../images/castor-oil-home.png";
+import e from "../images/pulses-home.jpeg";
+import j from "../images/peas-home.jpeg";
+import k from "../images/peagon-home.jpeg";
 import f from "../images/BB.jpg";
 import g from "../images/NB.jpg";
 import h from "../images/DD.jpg";
 import i from "../images/AA.jpg";
-import gg from "../images/guar-gum.jpeg";
+import gg from "../images/guar-home.jpeg";
 import wcsf from "../images/wc.png";
 import certi from "../images/certificate.jpg";
 // import bg2 from "../images/bg2.mp4";

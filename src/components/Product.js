@@ -1,14 +1,14 @@
 import { Link } from "react-router-dom";
 import { ToTop } from "./ToTop";
 
-import castorSeed from "../images/castor.jpeg";
-import castorOil from "../images/castor-oil.png";
-import guarSeed from "../images/guar.jpeg";
-import guarGum from "../images/guar-gum.jpeg";
-import cashew from "../images/cashew.png";
-import pulses from "../images/pulses.jpeg";
-import chickpeas from "../images/peas.jpeg";
-import pigeonPeas from "../images/ppeas.jpeg";
+import castorSeed from "../images/castor-prod.jpeg";
+import castorOil from "../images/oil-prod.jpeg";
+import guarSeed from "../images/guar-seed-prod.jpeg";
+import guarGum from "../images/guar-gum-prod.jpeg";
+import cashew from "../images/cashew-prod.png";
+import pulses from "../images/pulses-prod.jpeg";
+import chickpeas from "../images/peas-prod.jpeg";
+import pigeonPeas from "../images/peagon-prod.png";
 
 const products = [
   {
@@ -71,7 +71,7 @@ const products = [
 
 function Product() {
   return (
-    <div className="min-h-screen bg-[#e1e1e9]">
+    <div className="min-h-screen bg-[#e1e1e9] pt-16">
       <div className="max-w-7xl mx-auto px-4 py-12">
         <h1 className="text-center text-4xl md:text-5xl lg:text-6xl font-semibold mb-12">
           PRODUCTS
