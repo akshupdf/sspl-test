@@ -44,8 +44,31 @@ function Home() {
     { name: "Pigeon Peas", image: k },
   ];
 
+  const reviewData = [
+    {
+      stars: 5,
+      quote: "Exceptional Quality and Timely Deliveries",
+      text: "We have been working with SSPL, and their professionalism and dedication have consistently impressed us. The quality of their FSG Castor Oil is top-notch, and their timely deliveries ensure that our operations run smoothly.",
+    },
+    {
+      stars: 4,
+      quote: "Reliable Partner in Agricultural Trading",
+      text: "SSPL has been a reliable partner in our agricultural trading ventures. Their attention to detail and commitment to excellence set them apart in the industry. We have always received high-quality products and exceptional customer service.",
+    },
+    {
+      stars: 4.5,
+      quote: "Superior Quality and Efficient Logistics",
+      text: "Working with SSPL has been a game-changer for our business. Their FSG Castor Oil is of superior quality, and their efficient logistics have never let us down. We look forward to continuing our successful partnership.",
+    },
+    {
+      stars: 5,
+      quote: "Valued Client Relationship",
+      text: "SSPL continues to be a valued client, with constructive and engaging discussions during our weekly online meetings. The team is highly responsive, and provides clear insights that help us better understand their market requirements, supporting informed decision-making. We appreciate the strong working relationship and look forward to continuing our successful partnership",
+    },
+  ];
+
   return (
-    <div className="w-[100%] h-[100%]  ">
+    <div className="w-[100%] h-[100%] relative ">
       <Translate />
       <div
         className="lg:w-[100%] font-bold h-screen lg:flex justify-center bg-cover bg-center bg-no-repeat relative"
@@ -102,10 +125,11 @@ function Home() {
               slidesPerView: 2,
             },
             1024: {
-              slidesPerView: 3,
+              slidesPerView: 3.2,
+              spaceBetween: 20,
             },
             1280: {
-              slidesPerView: 4,
+              slidesPerView: 3,
             },
           }}
           modules={[Pagination, Navigation, Autoplay]}
@@ -199,66 +223,82 @@ function Home() {
         />
       </div>
       <div
-        className="w-[100%] lg:h-[80vh] mt-10 text-black"
+        className="w-full mt-16 text-black"
         data-aos="zoom-in"
-        data-aos-duration="3000"
+        data-aos-duration="1000"
       >
-        <h1
-          className="m-auto p-6 lg:text-5xl sm:text-2xl font-bold text-center lg:w-[40%] bg-center bg-no-repeat text-white bg-cover"
+        <h2
+          className="mx-auto p-4 text-center text-white font-bold
+               text-3xl lg:text-5xl
+               w-[280px] lg:w-[500px]
+               bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: `url(${rib})` }}
         >
           REVIEWS
-        </h1>
-        <div className="lg:flex w-[100%] justify-center items-center mt-10 lg:h-[50vh]">
-          <div className="flex flex-col items-center m-8 flex-grow">
-            <div className="p-6 mx-auto mt-10 rounded-xl text-center shadow-2xl cursor-pointer flex flex-col items-center h-full">
-              <ReactStars count={5} value={5} size={24} activeColor="black" />
-              <h1 className="lg:text-2xl font-bold mt-2">
-                “Exceptional Quality and Timely Deliveries”
-              </h1>
-              <p className="italic mt-4 flex-grow">
-                We have been working with SSPL , and their professionalism and
-                dedication have consistently impressed us. The quality of their
-                FSG Castor Oil is top-notch, and their timely deliveries ensure
-                that our operations run smoothly.
-              </p>
-            </div>
-          </div>
-          <div className="flex flex-col items-center m-4 flex-grow">
-            <div className="p-6 mx-auto mt-10 rounded-xl text-center shadow-2xl cursor-pointer flex flex-col items-center h-full">
-              <ReactStars count={5} value={4} size={24} activeColor="black" />
-              <h1 className="lg:text-2xl font-bold mt-2">
-                “ Reliable Partner in Agricultural Trading ”
-              </h1>
-              <p className="italic mt-4 flex-grow">
-                SSPL has been a reliable partner in our agricultural trading
-                ventures. Their attention to detail and commitment to excellence
-                set them apart in the industry. We have always received
-                high-quality products and exceptional customer service.
-              </p>
-            </div>
-          </div>
-          <div className="flex flex-col items-center m-8 flex-grow">
-            <div className="p-6 mx-auto mt-10 rounded-xl text-center shadow-2xl cursor-pointer flex flex-col items-center h-full">
-              <ReactStars
-                count={5}
-                value={4.5}
-                size={24}
-                activeColor="black"
-                isHalf={true}
-              />
-              <h1 className="lg:text-2xl font-bold mt-2">
-                “Superior Quality and Efficient Logistics”
-              </h1>
-              <p className="italic mt-4 flex-grow">
-                Working with SSPL has been a game-changer for our business.
-                Their FSG Castor Oil is of superior quality, and their efficient
-                logistics have never let us down. We look forward to continuing
-                our successful partnership.
-              </p>
-            </div>
-          </div>
-        </div>
+        </h2>
+        <Swiper
+          grabCursor
+          loop
+          autoplay={{
+            delay: 4500,
+            disableOnInteraction: false,
+          }}
+          centeredSlides={false}
+          spaceBetween={24}
+          breakpoints={{
+            320: {
+              slidesPerView: 1,
+            },
+            640: {
+              slidesPerView: 2,
+            },
+            1024: {
+              slidesPerView: 3.2,
+              spaceBetween: 20,
+            },
+            1280: {
+              slidesPerView: 3,
+            },
+          }}
+          modules={[Pagination, Navigation, Autoplay]}
+          className="w-full mt-8"
+        >
+          {reviewData.map((review, index) => (
+            <SwiperSlide key={index} className="pb-8">
+              <div
+                className={`
+              h-[360px]
+              rounded-2xl
+              bg-white
+              shadow-xl
+              border border-gray-100
+              p-8
+              flex flex-col
+              items-center
+              text-center
+              transition-all duration-500 
+            `}
+              >
+                <ReactStars
+                  count={5}
+                  value={review.stars}
+                  size={24}
+                  activeColor="#000"
+                  isHalf={review.stars % 1 !== 0}
+                  edit={false}
+                />
+
+                <h3 className="mt-5 text-xl font-bold line-clamp-3">
+                  "{review.quote}"
+                </h3>
+
+                <p className="mt-4 text-gray-600 flex-1 overflow-hidden">
+                  {review.text}
+                </p>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </div>
 
       <ToTop />

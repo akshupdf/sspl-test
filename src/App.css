@@ -1,9 +1,16 @@
-
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-*{
-    font-family: 'Times New Roman', Times, serif
-  }
+* {
+  font-family: "Times New Roman", Times, serif;
+}
+
+.reviews-swiper .swiper-slide {
+  height: auto;
+  display: flex;
+}
+
+.reviews-swiper .swiper-slide > div {
+  width: 100%;
+}
