@@ -69,66 +69,65 @@ function About() {
         <History />
       </div>
       <div className="min-h-screen w-full flex flex-col items-center justify-center ">
-        <h1 className=" border-black border mx-auto rounded-xl text-center mt-10 text-4xl p-4 bg-[#003662] text-white ">
+        <h1 className=" border-black border mx-auto rounded-xl text-center mt-10 text-4xl mb-8 p-4 bg-[#003662] text-white ">
           {" "}
           OUR TEAM
         </h1>
-        <div className="w-[95%] flex flex-shrink 2xl:flex-row xl:flex-row 2xl:flex-shrink justify-center items-stretch sm:flex-col">
-          <div className="m-4 w-[100%] border border-black rounded-lg shadow-xl p-6 pt-4 flex flex-col">
-            <img
-              src="https://drive.google.com/thumbnail?id=1Yy7q-pl2ISAOva8yejKY7SOUkDFXoOcm&sz=w1000"
-              alt="none"
-              className="object-contain border-8 border-[#3b576e] flex-grow-0"
-            />
-            <h1 className="text-xl font-bold mt-4">Mr. Pulkit Sekhsaria</h1>
-            <p className="mt-6 text-justify flex-grow">
-              Pulkit Sekhsaria is the Managing Director of Satyanarayan
-              Sekhsaria Pvt. Ltd. (SSPL). Pulkit has been actively involved in
-              investments and wealth management across various fields. Under his
-              astute leadership and dynamic vision SSPL has grown by leaps and
-              bounds and is today renowned as one of the leading and most
-              reputed trading organizations dealing in agro-commodities.
-            </p>
+        <div className="w-[95%] grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-4 gap-6 justify-items-center">
+          <div className="w-full max-w-sm border border-black rounded-lg shadow-xl p-6 flex flex-col items-center">
+            <div className="w-full h-64 flex items-center justify-center mb-4 rounded-lg  ">
+              <img
+                src="/Mr. Pulkit Sekhsaria.jpg"
+                alt="Mr. Pulkit Sekhsaria"
+                className="max-w-full max-h-full object-contain"
+              />
+            </div>
+            <h1 className="text-xl font-bold text-center">
+              Mr. Pulkit Sekhsaria
+            </h1>
           </div>
-          <div className="m-4 w-[100%] border border-black rounded-lg shadow-xl p-4 flex flex-col">
-            <img
-              src="https://drive.google.com/thumbnail?id=1KAcwx60sIYo42F2U_99TrCcDrk7zy5gS&sz=w1000"
-              alt="none"
-              className="object-contain flex-grow-0"
-            />
-            <h1 className="text-xl font-bold mt-4">Mr. Janardhan Sekhsaria</h1>
-            <p className="mt-4 text-justify flex-grow">
-              A seasoned financial executive with extensive experience in
-              finance, accounting, taxation and law Mr. Janardhan Sekhsaria
-              graduated with a B.Com from Sydenham College. His shrewd financial
-              acumen has been instrumental in providing SSPL with strategic
-              financial guidance and developing all the necessary policies and
-              procedures to ensure sound financial management and control of the
-              businesses.
-            </p>
+          <div className="w-full max-w-sm border border-black rounded-lg shadow-xl p-6 flex flex-col items-center">
+            <div className="w-full h-64 flex items-center justify-center mb-4 rounded-lg  ">
+              <img
+                src="/Mr. Rajaram Prabhu.png"
+                alt="Mr. Rajaram Prabhu"
+                className="max-w-full max-h-full object-contain"
+              />
+            </div>
+            <h1 className="text-xl font-bold text-center">
+              {" "}
+              Mr. Rajaram Prabhu
+            </h1>
           </div>
-          <div className="m-4 w-[100%] border border-black rounded-lg shadow-xl p-4 flex flex-col">
-            <img
-              src="https://drive.google.com/thumbnail?id=1HO5sIpWWB3k3KcZnfOGQimfeiU6VxsQ0&sz=w1000"
-              alt="none"
-              className="object-contain flex-grow-0"
-            />
-            <h1 className="text-xl font-bold mt-4">Mr. Bankatlal Gaggar</h1>
-            <p className="mt-4 text-justify flex-grow mb-6">
-              Mr. Bankatlal Gaggar is the Director and Advisor at SSPL. He has
-              had an illustrious and prolifically successful career of over four
-              decades of professional excellence in various capacities and
-              roles, both as an independent consultant as well in corporate
-              management. He was also elected as Chairman of the Institute of
-              Company Secretaries of India (ICSI) of its Western India Regional
-              Council.
-            </p>
+          <div className="w-full max-w-sm border border-black rounded-lg shadow-xl p-6 flex flex-col items-center">
+            <div className="w-full h-64 flex items-center justify-center mb-4 rounded-lg  ">
+              <img
+                src="/Mr. Ankush Pitale.png"
+                alt="Mr. Ankush Pitale"
+                className="max-w-full max-h-full object-contain"
+              />
+            </div>
+            <h1 className="text-xl font-bold text-center">
+              Mr. Ankush Pitale{" "}
+            </h1>
+          </div>
+          <div className="w-full max-w-sm border border-black rounded-lg shadow-xl p-6 flex flex-col items-center">
+            <div className="w-full h-64 flex items-center justify-center mb-4 rounded-lg  ">
+              <img
+                src="/Mr. Lakshit Desai.jpg"
+                alt="Mr. Lakshit Desai"
+                className="max-w-full max-h-full object-contain"
+              />
+            </div>
+            <h1 className="text-xl font-bold text-center">
+              Mr. Lakshit Desai{" "}
+            </h1>
           </div>
         </div>
       </div>
 
-      <hr className="border-2 w-[90%] mx-auto"></hr>
-      <div className="min-h-screen w-full p-10">
+      {/* <hr className="border-2 w-[90%] mx-auto"></hr> */}
+      {/* <div className="min-h-screen w-full p-10">
         <h1 className=" border-black border w-[60%] mx-auto rounded-xl text-center  text-4xl p-4 bg-[#003662] text-white mt-10">
           {" "}
           GLIMPSE OF OUR DELIVERY METHODS
@@ -163,7 +162,6 @@ function About() {
             </p>
           </div>
           <div className="flex sm:flex-col lg:flex-row lg:w-[50%] ">
-            {/* <img src={flexi} alt="flexi" className='lg:w-[40%]  '/> */}
             <img
               src={flexi1}
               alt="flexi"
@@ -190,7 +188,7 @@ function About() {
             </p>
           </div>
         </div>
-      </div>
+      </div> */}
       <ToTop />
     </div>
   );
