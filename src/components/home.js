@@ -19,7 +19,6 @@ import h from "../images/DD.jpg";
 import i from "../images/AA.jpg";
 import gg from "../images/guar-home.jpeg";
 import wcsf from "../images/wc.png";
-import certi from "../images/certificate.jpg";
 // import bg2 from "../images/bg2.mp4";
 import { Link } from "react-router-dom";
 import ReactStars from "react-rating-stars-component";

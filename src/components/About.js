@@ -1,10 +1,7 @@
 import React, { useEffect } from "react";
 import bg from "../images/about-us.jpg";
 // import ps from "../images/ps.jpg"
-import isotank from "../images/iso.jpg";
-import bulk from "../images/bulk.jpg";
 // import flexi from "../images/flexi.jpg"
-import flexi1 from "../images/flexi1.jpg";
 import History from "./History";
 import AOS from "aos";
 import "aos/dist/aos.css";
