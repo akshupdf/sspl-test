@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import bg from "../images/about-us.jpg";
 // import ps from "../images/ps.jpg"
 // import flexi from "../images/flexi.jpg"
-import History from "./History";
+import HistorySelector from "./HistorySelector";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { ToTop } from "./ToTop";
@@ -63,12 +63,12 @@ function About() {
         HISTORY
       </h1>
       <div className="  flex items-center justify-center ">
-        <History />
+        <HistorySelector />
       </div>
       <div className="min-h-screen w-full flex flex-col items-center justify-center ">
         <h1 className=" border-black border mx-auto rounded-xl text-center mt-10 text-4xl mb-8 p-4 bg-[#003662] text-white ">
           {" "}
-          OUR TEAM
+          OUR MANAGEMENT
         </h1>
         <div className="w-[95%] grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-4 gap-6 justify-items-center">
           <div className="w-full max-w-sm border border-black rounded-lg shadow-xl p-6 flex flex-col items-center">
@@ -82,6 +82,14 @@ function About() {
             <h1 className="text-xl font-bold text-center">
               Mr. Pulkit Sekhsaria
             </h1>
+            <p className="text-left">
+              Pulkit Sekhsaria is the Managing Director of Satyanarayan
+              Sekhsaria Pvt. Ltd. (SSPL). Pulkit has been actively involved in
+              investments and wealth management across various fields. Under his
+              astute leadership and dynamic vision SSPL has grown by leaps and
+              bounds and is today renowned as one of the leading and most
+              reputed trading organizations dealing in agro-commodities.
+            </p>
           </div>
           <div className="w-full max-w-sm border border-black rounded-lg shadow-xl p-6 flex flex-col items-center">
             <div className="w-full h-64 flex items-center justify-center mb-4 rounded-lg  ">
@@ -95,6 +103,16 @@ function About() {
               {" "}
               Mr. Rajaram Prabhu
             </h1>
+            <p className="text-left">
+              Mr. Rajaram Prabhu is a Director at SSPL. With over 4 decades of
+              experience in the commodity trading sector, he brings deep market
+              insight and strategic expertise. His leadership is defined by a
+              keen understanding of market dynamics and a commitment to
+              excellence in international trade practices. He holds a degree in
+              Science and Post-Graduation in Business Management Studies, which
+              provides a strong academic foundation for his work in commodity
+              markets.
+            </p>
           </div>
           <div className="w-full max-w-sm border border-black rounded-lg shadow-xl p-6 flex flex-col items-center">
             <div className="w-full h-64 flex items-center justify-center mb-4 rounded-lg  ">
@@ -107,6 +125,17 @@ function About() {
             <h1 className="text-xl font-bold text-center">
               Mr. Ankush Pitale{" "}
             </h1>
+            <p className="text-left">
+              Mr. Ankush Pitale is a Director at SSPL. Prior to joining SSPL, he
+              worked for over 25 years in investment banking with leading
+              financial institutions, including JM Financial, JP Morgan,
+              Deutsche Bank, Citigroup and HDFC Bank. As a Director at SSPL, he
+              brings extensive expertise in debt and equity fundraising. His
+              deep industry knowledge, strategic vision and commitment to
+              ethical governance enables him to provide robust oversight and
+              valuable insights that support the company’s growth and long-term
+              success.
+            </p>
           </div>
           <div className="w-full max-w-sm border border-black rounded-lg shadow-xl p-6 flex flex-col items-center">
             <div className="w-full h-64 flex items-center justify-center mb-4 rounded-lg  ">
@@ -119,6 +148,16 @@ function About() {
             <h1 className="text-xl font-bold text-center">
               Mr. Lakshit Desai{" "}
             </h1>
+            <p className="text-left">
+              Mr. Lakshit Desai serves as a Director at SSPL, bringing over 27
+              years of experience in taxation, audit, accounting, and finance. A
+              Chartered Accountant with bachelor’s degrees in commerce and law,
+              he has helped multinational corporations, Indian enterprises, and
+              high-net-worth individuals in navigating complex tax and exchange
+              control frameworks, including entry strategies for India,
+              corporate reorganizations, tax and regulatory compliances as well
+              as litigation.
+            </p>
           </div>
         </div>
       </div>
