@@ -18,16 +18,12 @@ function Navbar() {
       <div className="flex justify-between items-center w-full lg:w-[50%] pt-2">
         <Link to="/" className="flex items-center flex-col lg:flex-row">
           {" "}
-          <img
-            src={logo}
-            alt="Logo"
-            className="w-40 h-15 mb-2 lg:mb-0 lg:mr-4"
-          />
+          <img src={logo} alt="Logo" className="w-40 h-15 mb-2 lg:mb-0 " />
           <div className="text-left">
             <span className="text-white font-bold text-xl hidden lg:block uppercase">
               Satyanarayan Sehksaria Private Limited
             </span>
-            <span className="text-blue-200 text-sm lg:text-base hidden lg:block text-center capitalize">
+            <span className="text-blue-200 text-sm lg:text-base hidden lg:block  capitalize">
               Building trust farm to market supply chains
             </span>
           </div>

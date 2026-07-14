@@ -137,7 +137,7 @@ function Home() {
           {products.map((product) => (
             <SwiperSlide key={product.name}>
               <div className="bg-white rounded-3xl shadow-xl p-5 h-[420px] flex flex-col">
-                <div className="h-[260px] w-full border border-gray-200 rounded-2xl bg-gray-50 flex items-center justify-center p-4">
+                <div className="h-[260px] w-full  flex items-center justify-center p-4">
                   <img
                     src={product.image}
                     alt={product.name}
