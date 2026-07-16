@@ -3,8 +3,8 @@ import { ToTop } from "./ToTop";
 
 import castorSeed from "../images/castor-prod.jpeg";
 import castorOil from "../images/oil-prod.jpeg";
-import guarSeed from "../images/guar-seed-prod.jpeg";
-import guarGum from "../images/guar-gum-prod.jpeg";
+import guarSeed from "../images/guar-seed-prod.png";
+import guarGum from "../images/guar-gum-prod.png";
 import cashew from "../images/cashew-prod.png";
 import pulses from "../images/pulses-prod.jpeg";
 import chickpeas from "../images/peas-prod.jpeg";
@@ -71,32 +71,35 @@ const products = [
 
 function Product() {
   return (
-    <div className="min-h-screen bg-[#e1e1e9] pt-16">
-      <div className="max-w-7xl mx-auto px-4 py-12">
-        <h1 className="text-center text-4xl md:text-5xl lg:text-6xl font-semibold mb-12">
-          PRODUCTS
-        </h1>
+    <div className="min-h-screen bg-gray-50 pt-28 lg:pt-32 pb-16">
+      <div className="max-w-7xl mx-auto px-4 md:px-8">
+        <div className="text-center mb-12">
+          <h1 className="text-4xl md:text-5xl font-bold text-[#003662] uppercase tracking-wide">
+            Products
+          </h1>
+          <div className="h-1 w-20 bg-green-700 mx-auto mt-4 rounded"></div>
+        </div>
 
         <div className="space-y-8">
           {products.map((product, index) => (
             <div
               key={product.title}
-              className={`flex flex-col lg:flex-row bg-white rounded-2xl shadow-lg overflow-hidden`}
+              className="flex flex-col lg:flex-row bg-white rounded-2xl shadow-md  transition-all duration-300 border border-gray-100 overflow-hidden"
             >
               {/* Image Section */}
-              <div className="w-full lg:w-[380px] xl:w-[450px] p-6 flex items-center justify-center">
-                <div className="w-full h-[280px] md:h-[320px] border border-gray-200 rounded-xl bg-gray-50 flex items-center justify-center">
+              <div className="w-full lg:w-[380px] xl:w-[450px] p-6 flex items-center justify-center ">
+                <div className="w-full h-[280px] md:h-[320px] bg-white rounded-xl flex items-center justify-center p-4">
                   <img
                     src={product.image}
                     alt={product.title}
-                    className="max-w-full max-h-full object-contain p-4"
+                    className="max-w-full max-h-full object-contain p-2"
                   />
                 </div>
               </div>
 
               {/* Content Section */}
               <div className="flex-1 p-6 lg:p-10 flex flex-col justify-center">
-                <h2 className="text-2xl lg:text-3xl font-semibold mb-4">
+                <h2 className="text-2xl lg:text-3xl font-bold font-serif text-[#003662] mb-4">
                   {product.title}
                 </h2>
 
@@ -108,7 +111,7 @@ function Product() {
                   <Link
                     to={product.link}
                     target="_blank"
-                    className="inline-flex items-center justify-center px-6 py-3 bg-green-800 text-white rounded-lg hover:bg-green-700 transition-colors"
+                    className="inline-flex items-center justify-center px-6 py-3 bg-green-700 hover:bg-green-800 text-white font-semibold rounded-lg shadow-md transition-colors duration-300"
                   >
                     Get In Touch
                   </Link>

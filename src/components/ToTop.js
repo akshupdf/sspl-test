@@ -32,7 +32,7 @@ export const ToTop = () => {
     <div>
         {
       isVisible && 
-      <div className="fixed bottom-40 right-6 m-4 cursor-pointer animate-bounce">
+      <div className="fixed bottom-12 right-6 m-4 cursor-pointer animate-bounce z-[9999]">
         <MdArrowUpward  onClick={scrollToTop}  className='w-14 h-14 bg-white rounded-full shadow-xl' /> </div>
       }
     </div>

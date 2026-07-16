@@ -2,8 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Base typography */
 * {
-  font-family: "Times New Roman", Times, serif;
+  font-family: "Times New Roman", Times, serif !important;
 }
 
 .reviews-swiper .swiper-slide {
@@ -13,4 +14,19 @@
 
 .reviews-swiper .swiper-slide > div {
   width: 100%;
+}
+
+/* Custom premium scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #003662;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #002240;
 }

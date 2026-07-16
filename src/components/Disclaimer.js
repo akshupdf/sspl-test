@@ -3,13 +3,18 @@ import { ToTop } from "./ToTop"
 
 
 
-function Disclaimer()  {
-    return (
+function Disclaimer() {
+  return (
+    <div className="w-full min-h-screen pt-28 lg:pt-32 pb-16 bg-gray-50 flex flex-col justify-start">
+      <div className="text-center mb-12">
+        <h1 className="text-4xl md:text-5xl font-bold text-[#003662] uppercase tracking-wide">
+          Disclaimer
+        </h1>
+        <div className="h-1 w-20 bg-green-700 mx-auto mt-4 rounded"></div>
+      </div>
 
-        <div className="w-[100%] flex flex-col justify-center items-center lg:p-20 sm:p-4 pt-4">
-             <h1 className='w-[100%] text-center  2xl:text-6xl backdrop-blur-sm pt-2 sm:text-4xl mb-4'> Disclaimer</h1>
-					
-				<div className="w-[80%] ">
+      <div className="max-w-5xl mx-auto px-4 md:px-8 w-full">
+        <div className="bg-white border border-gray-100 rounded-2xl p-6 md:p-10 shadow-lg text-gray-700 text-justify text-base md:text-lg leading-relaxed space-y-6">
 				<div >
 					<div >
                     
@@ -49,6 +54,7 @@ function Disclaimer()  {
                     <ul className="ml-8"><li   ><ul><li  ><span  >Additionally, you may encounter “cookies” or other similar devices on certain pages of the Website that are placed by third parties. </span><b>SSPL</b><span  > does not control the use of cookies by third parties</span><span  >.</span></li></ul></li></ul><ul className="list-disc"><li  ><span  >To the fullest extent permitted under applicable law, </span><b>SSPL</b><span  > or our suppliers shall not be liable for any indirect, incidental, special, consequential or exemplary damages, including but not limited to, damages for loss of profits, goodwill, use, data or other intangible losses arising out of or in connection with the Website, its services or this contract/agreement/terms &amp; conditions.</span></li></ul><ul className="list-disc"><li  ><span  >Though </span><b>SSPL</b><span  > shall make sure uninterrupted functioning of our website/application etc however </span><b>SSPL</b><span  > will not be liable, in case the same are temporarily out of service due to some technical limitation/errors beyond our control.</span></li></ul>
                     <ul className="list-disc"><li  ><span  >If you feel that any of the linked website contains any unlawful or illegal content, please contact </span><b>SSPL</b><span  > as the address mentioned on the Web page “Contact us”.</span></li></ul><ul ><li className="list-disc" ><b>Your Consent</b></li><li   ><ul className="ml-8"><li  ><span  >By using the Website and/ or by providing your information, you consent to the collection and use of the information you disclose on the Website in accordance with this Privacy Policy, including but not limited to Your consent for sharing your information as per this privacy policy.</span></li></ul></li></ul><ul><li   ><ul className="ml-8"><li  ><span  >If </span><b>SSPL</b><span  > decides to change the privacy policy, </span><b>SSPL</b><span  > will post those changes on this page so that you are always aware of what information </span><b>SSPL</b><span  > collects, how </span><b>SSPL</b><span  > uses it, and under what circumstances </span><b>SSPL</b><span  > discloses it.</span></li></ul></li></ul><ul ><li className="list-disc"><b>Applicable Law and Jurisdiction</b></li></ul>
                     <ul className="ml-8"><li   ><ul><li  ><span  >This Website shall be governed by and interpreted and construed in accordance with the laws of India. The place of jurisdiction shall be exclusively in </span><b>Mumbai</b><span  >, India.</span></li></ul></li></ul></div>
+				</div>
 				</div>
 				</div>
 		<ToTop />

@@ -6,7 +6,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Pagination, Navigation, Autoplay } from "swiper/modules";
 import rib from "../images/rib2.png";
-import a from "../images/guar-seed-home.jpeg";
+import a from "../images/guar-seed-home.png";
 import b from "../images/cashew-home.jpeg";
 import c from "../images/castor-home.jpeg";
 import d from "../images/castor-oil-home.png";
@@ -17,7 +17,7 @@ import f from "../images/BB.jpg";
 import g from "../images/NB.jpg";
 import h from "../images/DD.jpg";
 import i from "../images/AA.jpg";
-import gg from "../images/guar-home.jpeg";
+import gg from "../images/guar-home.png";
 import wcsf from "../images/wc.png";
 // import bg2 from "../images/bg2.mp4";
 import { Link } from "react-router-dom";
@@ -50,7 +50,7 @@ function Home() {
       text: "We have been working with SSPL, and their professionalism and dedication have consistently impressed us. The quality of their FSG Castor Oil is top-notch, and their timely deliveries ensure that our operations run smoothly.",
     },
     {
-      stars: 4,
+      stars: 4.7,
       quote: "Reliable Partner in Agricultural Trading",
       text: "SSPL has been a reliable partner in our agricultural trading ventures. Their attention to detail and commitment to excellence set them apart in the industry. We have always received high-quality products and exceptional customer service.",
     },
@@ -63,6 +63,11 @@ function Home() {
       stars: 5,
       quote: "Valued Client Relationship",
       text: "SSPL continues to be a valued client, with constructive and engaging discussions during our weekly online meetings. The team is highly responsive, and provides clear insights that help us better understand their market requirements, supporting informed decision-making. We appreciate the strong working relationship and look forward to continuing our successful partnership",
+    },
+    {
+      stars: 4.8,
+      quote: "A Trusted & Ethical Organization",
+      text: "SSPL is a reputed global exporter known for consistently delivering high-quality products. The management team, led by Mr. Pulkit Sekhsaria, demonstrates professionalism, responsiveness & a strong commitment to meeting customer requirements. Their greatest strength is their hands-on approach to quality, maintaining the highest product standards, conduct business with integrity & transparency & focus on building long-term, sustainable relationships. These values make them a trusted & ethical organization in the global castor oil industry",
     },
   ];
 
@@ -90,6 +95,10 @@ function Home() {
             SSPL is focused on Exporting and supplying of a wide range of
             agricultural commodities like Castor Seed, Guar Seed, Castor Oil
             (FSG Grade), Cashew Kernels , Pulses , Chickpeas and Pigeon Peas .
+            <br></br>
+            <span className=" text-2xl">
+              Nurturing Nature, Delivering Quality Worldwide
+            </span>
           </p>
 
           <div className="flex flex-col sm:flex-row gap-8 justify-center items-center">
