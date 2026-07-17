@@ -6,15 +6,40 @@ import { FaClock } from "react-icons/fa";
 
 const countryCodes = [
   { code: "+91", country: "India", pattern: /^\d{10}$/, example: "9876543210" },
-  { code: "+1", country: "USA/Canada", pattern: /^\d{10}$/, example: "1234567890" },
+  {
+    code: "+1",
+    country: "USA/Canada",
+    pattern: /^\d{10}$/,
+    example: "1234567890",
+  },
   { code: "+44", country: "UK", pattern: /^\d{10}$/, example: "7123456789" },
-  { code: "+61", country: "Australia", pattern: /^\d{10}$/, example: "4123456789" },
+  {
+    code: "+61",
+    country: "Australia",
+    pattern: /^\d{10}$/,
+    example: "4123456789",
+  },
   { code: "+86", country: "China", pattern: /^\d{10}$/, example: "1381234567" },
-  { code: "+49", country: "Germany", pattern: /^\d{10}$/, example: "1512345678" },
-  { code: "+33", country: "France", pattern: /^\d{10}$/, example: "6123456789" },
+  {
+    code: "+49",
+    country: "Germany",
+    pattern: /^\d{10}$/,
+    example: "1512345678",
+  },
+  {
+    code: "+33",
+    country: "France",
+    pattern: /^\d{10}$/,
+    example: "6123456789",
+  },
   { code: "+81", country: "Japan", pattern: /^\d{10}$/, example: "9012345678" },
   { code: "+971", country: "UAE", pattern: /^\d{10}$/, example: "5012345678" },
-  { code: "+65", country: "Singapore", pattern: /^\d{10}$/, example: "9123456789" },
+  {
+    code: "+65",
+    country: "Singapore",
+    pattern: /^\d{10}$/,
+    example: "9123456789",
+  },
 ];
 
 const products = [
@@ -53,7 +78,8 @@ function Contact() {
 
   // Strict email validation checking for standard formatting rules
   const validateEmail = (email) => {
-    const emailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)+$/;
+    const emailRegex =
+      /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)+$/;
     return emailRegex.test(email);
   };
 
@@ -92,7 +118,8 @@ function Contact() {
       if (!value.trim()) {
         errorMsg = "Contact Number is required";
       } else if (!validatePhoneNumber(value.trim())) {
-        errorMsg = "Contact Number must contain exactly 10 digits (numbers only)";
+        errorMsg =
+          "Contact Number must contain exactly 10 digits (numbers only)";
       }
     }
 
@@ -225,8 +252,8 @@ function Contact() {
   const body = "Hello, I would like to...";
 
   return (
-    <div className="w-full min-h-screen pt-28 lg:pt-32 pb-16 bg-gray-50 flex flex-col justify-start">
-      <div className="text-center mb-12">
+    <div className="w-full min-h-screen pt-28 lg:pt-24 bg-gray-50 flex flex-col justify-start">
+      <div className="text-center mb-8">
         <h1 className="text-4xl md:text-5xl font-bold text-[#003662] uppercase tracking-wide">
           Contact Us
         </h1>
@@ -237,168 +264,188 @@ function Contact() {
         {/* Form Column */}
         <div className="w-full lg:w-1/2 flex justify-center">
           <div className="w-full max-w-xl bg-white border border-gray-100 rounded-2xl p-6 md:p-10 shadow-lg">
-            <form className="space-y-4" onSubmit={handleSubmit}>
+            <form className="space-y-5" onSubmit={handleSubmit}>
               {/* Full Name */}
-              <div>
-                <label className="block mb-2 text-sm font-semibold text-gray-700">
+              <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
+                <label className="sm:w-1/3 text-left text-sm font-semibold text-gray-700 flex-shrink-0">
                   Full Name *
                 </label>
-                <input
-                  value={formData.fullName}
-                  onChange={handleChange}
-                  onBlur={handleBlur}
-                  name="fullName"
-                  className={`bg-gray-50 border ${
-                    errors.fullName ? "border-red-500" : "border-gray-300"
-                  } text-gray-900 text-sm rounded-lg focus:ring-2 focus:ring-[#003662] focus:border-[#003662] block w-full p-2.5 outline-none`}
-                  placeholder="Enter your full name"
-                />
-                {errors.fullName && (
-                  <p className="text-red-500 text-sm mt-1">{errors.fullName}</p>
-                )}
+                <div className="flex-1">
+                  <input
+                    value={formData.fullName}
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    name="fullName"
+                    className={`bg-gray-50 border ${
+                      errors.fullName ? "border-red-500" : "border-gray-300"
+                    } text-gray-900 text-sm rounded-lg focus:ring-2 focus:ring-[#003662] focus:border-[#003662] block w-full p-2.5 outline-none`}
+                    placeholder="Enter your full name"
+                  />
+                  {errors.fullName && (
+                    <p className="text-red-500 text-sm mt-1">
+                      {errors.fullName}
+                    </p>
+                  )}
+                </div>
               </div>
 
               {/* Email Address */}
-              <div>
-                <label className="block mb-2 text-sm font-semibold text-gray-700">
+              <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
+                <label className="sm:w-1/3 text-left text-sm font-semibold text-gray-700 flex-shrink-0">
                   Email Address *
                 </label>
-                <input
-                  value={formData.email}
-                  onChange={handleChange}
-                  onBlur={handleBlur}
-                  name="email"
-                  type="email"
-                  className={`bg-gray-50 border ${
-                    errors.email ? "border-red-500" : "border-gray-300"
-                  } text-gray-900 text-sm rounded-lg focus:ring-2 focus:ring-[#003662] focus:border-[#003662] block w-full p-2.5 outline-none`}
-                  placeholder="Enter your email address"
-                />
-                {errors.email && (
-                  <p className="text-red-500 text-sm mt-1">{errors.email}</p>
-                )}
+                <div className="flex-1">
+                  <input
+                    value={formData.email}
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    name="email"
+                    type="email"
+                    className={`bg-gray-50 border ${
+                      errors.email ? "border-red-500" : "border-gray-300"
+                    } text-gray-900 text-sm rounded-lg focus:ring-2 focus:ring-[#003662] focus:border-[#003662] block w-full p-2.5 outline-none`}
+                    placeholder="Enter your email address"
+                  />
+                  {errors.email && (
+                    <p className="text-red-500 text-sm mt-1">{errors.email}</p>
+                  )}
+                </div>
               </div>
 
               {/* Organization */}
-              <div>
-                <label className="block mb-2 text-sm font-semibold text-gray-700">
+              <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
+                <label className="sm:w-1/3 text-left text-sm font-semibold text-gray-700 flex-shrink-0">
                   Organization *
                 </label>
-                <input
-                  value={formData.organization}
-                  onChange={handleChange}
-                  onBlur={handleBlur}
-                  name="organization"
-                  className={`bg-gray-50 border ${
-                    errors.organization ? "border-red-500" : "border-gray-300"
-                  } text-gray-900 text-sm rounded-lg focus:ring-2 focus:ring-[#003662] focus:border-[#003662] block w-full p-2.5 outline-none`}
-                  placeholder="Enter your organization name"
-                />
-                {errors.organization && (
-                  <p className="text-red-500 text-sm mt-1">
-                    {errors.organization}
-                  </p>
-                )}
+                <div className="flex-1">
+                  <input
+                    value={formData.organization}
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    name="organization"
+                    className={`bg-gray-50 border ${
+                      errors.organization ? "border-red-500" : "border-gray-300"
+                    } text-gray-900 text-sm rounded-lg focus:ring-2 focus:ring-[#003662] focus:border-[#003662] block w-full p-2.5 outline-none`}
+                    placeholder="Enter your organization name"
+                  />
+                  {errors.organization && (
+                    <p className="text-red-500 text-sm mt-1">
+                      {errors.organization}
+                    </p>
+                  )}
+                </div>
               </div>
 
               {/* Contact Number with Country Code */}
-              <div>
-                <label className="block mb-2 text-sm font-semibold text-gray-700">
+              <div className="flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-4">
+                <label className="sm:w-1/3 text-left text-sm font-semibold text-gray-700 flex-shrink-0 pt-2.5">
                   Contact Number *
                 </label>
-                <div className="flex gap-2">
-                  <select
-                    value={formData.countryCode}
-                    onChange={handleChange}
-                    name="countryCode"
-                    className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-2 focus:ring-[#003662] focus:border-[#003662] block w-[110px] p-2.5 outline-none"
-                  >
-                    {countryCodes.map((country) => (
-                      <option key={country.code} value={country.code}>
-                        {country.code}
-                      </option>
-                    ))}
-                  </select>
-                  <input
-                    value={formData.contactNumber}
-                    onChange={handleChange}
-                    onBlur={handleBlur}
-                    name="contactNumber"
-                    type="tel"
-                    className={`flex-1 bg-gray-50 border ${
-                      errors.contactNumber
-                        ? "border-red-500"
-                        : "border-gray-300"
-                    } text-gray-900 text-sm rounded-lg focus:ring-2 focus:ring-[#003662] focus:border-[#003662] block p-2.5 outline-none`}
-                    placeholder="Enter exactly 10 digits"
-                  />
-                </div>
-                {errors.contactNumber && (
-                  <p className="text-red-500 text-sm mt-1">
-                    {errors.contactNumber}
+                <div className="flex-1 w-full">
+                  <div className="flex gap-2">
+                    <select
+                      value={formData.countryCode}
+                      onChange={handleChange}
+                      name="countryCode"
+                      className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-2 focus:ring-[#003662] focus:border-[#003662] block w-[110px] p-2.5 outline-none"
+                    >
+                      {countryCodes.map((country) => (
+                        <option key={country.code} value={country.code}>
+                          {country.code}
+                        </option>
+                      ))}
+                    </select>
+                    <input
+                      value={formData.contactNumber}
+                      onChange={handleChange}
+                      onBlur={handleBlur}
+                      name="contactNumber"
+                      type="tel"
+                      className={`flex-1 bg-gray-50 border ${
+                        errors.contactNumber
+                          ? "border-red-500"
+                          : "border-gray-300"
+                      } text-gray-900 text-sm rounded-lg focus:ring-2 focus:ring-[#003662] focus:border-[#003662] block p-2.5 outline-none`}
+                      placeholder="Enter exactly 10 digits"
+                    />
+                  </div>
+                  {errors.contactNumber && (
+                    <p className="text-red-500 text-sm mt-1">
+                      {errors.contactNumber}
+                    </p>
+                  )}
+                  <p className="text-gray-500 text-xs mt-1">
+                    Enforce strictly 10 digits only.
                   </p>
-                )}
-                <p className="text-gray-500 text-xs mt-1">
-                  Enforce strictly 10 digits only.
-                </p>
+                </div>
               </div>
 
               {/* Product Dropdown */}
-              <div>
-                <label className="block mb-2 text-sm font-semibold text-gray-700">
+              <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
+                <label className="sm:w-1/3 text-left text-sm font-semibold text-gray-700 flex-shrink-0">
                   Product *
                 </label>
-                <select
-                  value={formData.product}
-                  onChange={handleChange}
-                  name="product"
-                  className={`bg-gray-50 border ${
-                    errors.product ? "border-red-500" : "border-gray-300"
-                  } text-gray-900 text-sm rounded-lg focus:ring-2 focus:ring-[#003662] focus:border-[#003662] block w-full p-2.5 outline-none`}
-                >
-                  <option value="">Select a product</option>
-                  {products.map((product) => (
-                    <option key={product} value={product}>
-                      {product}
-                    </option>
-                  ))}
-                </select>
-                {errors.product && (
-                  <p className="text-red-500 text-sm mt-1">{errors.product}</p>
-                )}
+                <div className="flex-1">
+                  <select
+                    value={formData.product}
+                    onChange={handleChange}
+                    name="product"
+                    className={`bg-gray-50 border ${
+                      errors.product ? "border-red-500" : "border-gray-300"
+                    } text-gray-900 text-sm rounded-lg focus:ring-2 focus:ring-[#003662] focus:border-[#003662] block w-full p-2.5 outline-none`}
+                  >
+                    <option value="">Select a product</option>
+                    {products.map((product) => (
+                      <option key={product} value={product}>
+                        {product}
+                      </option>
+                    ))}
+                  </select>
+                  {errors.product && (
+                    <p className="text-red-500 text-sm mt-1">
+                      {errors.product}
+                    </p>
+                  )}
+                </div>
               </div>
 
               {/* Purpose of Enquiry */}
-              <div>
-                <label className="block mb-2 text-sm font-semibold text-gray-700">
+              <div className="flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-4">
+                <label className="sm:w-1/3 text-left text-sm font-semibold text-gray-700 flex-shrink-0 pt-2.5">
                   Purpose of Enquiry *
                 </label>
-                <textarea
-                  value={formData.purposeOfEnquiry}
-                  onChange={handleChange}
-                  onBlur={handleBlur}
-                  name="purposeOfEnquiry"
-                  rows="4"
-                  className={`block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border ${
-                    errors.purposeOfEnquiry
-                      ? "border-red-500"
-                      : "border-gray-300"
-                  } focus:ring-2 focus:ring-[#003662] focus:border-[#003662] outline-none`}
-                  placeholder="Please describe your enquiry..."
-                ></textarea>
-                {errors.purposeOfEnquiry && (
-                  <p className="text-red-500 text-sm mt-1">
-                    {errors.purposeOfEnquiry}
-                  </p>
-                )}
+                <div className="flex-1 w-full">
+                  <textarea
+                    value={formData.purposeOfEnquiry}
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    name="purposeOfEnquiry"
+                    rows="4"
+                    className={`block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border ${
+                      errors.purposeOfEnquiry
+                        ? "border-red-500"
+                        : "border-gray-300"
+                    } focus:ring-2 focus:ring-[#003662] focus:border-[#003662] outline-none`}
+                    placeholder="Please describe your enquiry..."
+                  ></textarea>
+                  {errors.purposeOfEnquiry && (
+                    <p className="text-red-500 text-sm mt-1">
+                      {errors.purposeOfEnquiry}
+                    </p>
+                  )}
+                </div>
               </div>
 
-              <button
-                type="submit"
-                className="w-full text-white bg-[#003662] hover:bg-[#002240] focus:ring-4 focus:outline-none focus:ring-blue-200 font-semibold rounded-lg text-sm px-5 py-3 text-center transition-colors duration-300 shadow-md"
-              >
-                Submit Enquiry
-              </button>
+              {/* Submit Button aligned with inputs */}
+              <div className="flex flex-col sm:flex-row gap-2 sm:gap-4">
+                <div className="sm:w-1/3 flex-shrink-0"></div>
+                <button
+                  type="submit"
+                  className="w-full sm:w-2/3 text-white bg-[#003662] hover:bg-[#002240] focus:ring-4 focus:outline-none focus:ring-blue-200 font-semibold rounded-lg text-sm px-5 py-3 text-center transition-colors duration-300 shadow-md animate-none"
+                >
+                  Submit Enquiry
+                </button>
+              </div>
             </form>
           </div>
         </div>
@@ -423,7 +470,8 @@ function Contact() {
               <div className="flex items-center gap-3">
                 <GiRotaryPhone className="text-xl text-[#003662]" />
                 <p className="text-gray-600">
-                  <span className="font-semibold text-gray-800">Phone:</span> +91 22 4057 0360
+                  <span className="font-semibold text-gray-800">Phone:</span>{" "}
+                  +91 22 4057 0360
                 </p>
               </div>
               <div className="flex items-center gap-3">
@@ -441,7 +489,8 @@ function Contact() {
               <div className="flex items-center gap-3">
                 <FaClock className="text-xl text-[#003662]" />
                 <p className="text-gray-600">
-                  <span className="font-semibold text-gray-800">Hours:</span> Monday To Friday, 9am - 6pm
+                  <span className="font-semibold text-gray-800">Hours:</span>{" "}
+                  Monday To Friday, 9am - 6pm
                 </p>
               </div>
             </div>

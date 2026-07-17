@@ -28,7 +28,7 @@ function Navbar() {
                 Satyanarayan Sekhsaria Pvt. Ltd.
               </span>
               <span className="text-blue-200 text-xs block capitalize">
-                Building trust in farm-to-market supply chains
+                Nurturing Nature, Delivering Quality Worldwide
               </span>
             </div>
           </Link>
@@ -45,7 +45,7 @@ function Navbar() {
             isOpen ? "block pb-6 lg:pb-0" : "hidden"
           }`}
         >
-          <ul className="flex flex-col lg:flex-row items-center gap-4 lg:gap-8 text-base font-semibold tracking-wide w-full lg:w-auto ml-auto lg:ml-0">
+          <ul className="flex flex-col lg:flex-row items-center gap-4 lg:gap-8 text-xl font-semibold tracking-wide w-full lg:w-auto ml-auto lg:ml-0">
             <li className="relative group">
               <Link
                 to="/"

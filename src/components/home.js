@@ -79,32 +79,29 @@ function Home() {
         style={{ backgroundImage: "url(/herobg.png)" }}
       >
         {/* Overlay for better text readability */}
-        <div className="absolute inset-0 bg-black/20"></div>
+        <div className="absolute inset-0 bg-white/20"></div>
         <div
-          className="relative z-10 max-w-6xl mx-auto px-4  mt-[8rem]   text-center"
+          className="relative z-10 max-w-6xl mx-auto px-4 mt-[8rem] text-center"
           data-aos="fade-left"
           data-aos-duration="3000"
         >
           <div className="mb-8">
-            <h1 className="lg:text-7xl sm:text-5xl xl:text-8xl mb-6 font-serif leading-tight text-white drop-shadow-lg">
+            <h1 className="lg:text-7xl sm:text-5xl xl:text-8xl mb-6 font-serif leading-tight text-[#003662] drop-shadow-sm">
               SSPL
             </h1>
           </div>
 
-          <p className="text-lg sm:text-base lg:text-xl mb-[6rem] text-white/80 leading-relaxed max-w-5xl mx-auto">
+          <p className="text-lg sm:text-base lg:text-xl mb-[6rem] text-gray-800 leading-relaxed max-w-5xl mx-auto font-medium">
             SSPL is focused on Exporting and supplying of a wide range of
             agricultural commodities like Castor Seed, Guar Seed, Castor Oil
             (FSG Grade), Cashew Kernels , Pulses , Chickpeas and Pigeon Peas .
             <br></br>
-            <span className=" text-2xl">
-              Nurturing Nature, Delivering Quality Worldwide
-            </span>
           </p>
 
           <div className="flex flex-col sm:flex-row gap-8 justify-center items-center">
             <Link
               to="/about"
-              className="group inline-flex items-center justify-center px-10 py-5 text-lg font-bold text-white bg-white/20 backdrop-blur-sm border-2 border-white/30 rounded-xl shadow-xl hover:bg-white/30 transition-all duration-500 hover:shadow-2xl hover:scale-105"
+              className="group inline-flex items-center justify-center px-10 py-5 text-lg font-bold text-white bg-green-800 hover:bg-green-700 rounded-xl shadow-xl transition-all duration-500 hover:shadow-2xl hover:scale-105"
             >
               <span>Discover Our Story</span>
             </Link>
@@ -112,10 +109,13 @@ function Home() {
         </div>
       </div>
 
-      <div className="  w-[100%] text-center items-center ">
-        <h1 className="m-auto  p-6  lg:text-5xl sm:text-2xl font-bold">
-          OUR PRODUCTS
-        </h1>
+      <div className="w-full text-center items-center py-8">
+        <div className="text-center mb-12">
+          <h1 className="text-4xl md:text-5xl font-bold text-[#003662] uppercase tracking-wide">
+            Our Products
+          </h1>
+          <div className="h-1 w-20 bg-green-700 mx-auto mt-4 rounded"></div>
+        </div>
         <Swiper
           grabCursor
           loop
@@ -180,13 +180,13 @@ function Home() {
         </Link>
       </div>
 
-      <div className=" justify-center pt-10 items-center text-center h-[32rem] w-[100%] ">
-        <h1
-          className="m-auto  p-6  lg:text-5xl sm:text-2xl font-bold lg:w-[42%] text-white bg-cover bg-center bg-no-repeat "
-          style={{ backgroundImage: `url(${rib})` }}
-        >
-          MEMBERSHIPS
-        </h1>
+      <div className="justify-center pt-10 items-center text-center w-full mb-10">
+        <div className="text-center mb-12">
+          <h1 className="text-4xl md:text-5xl font-bold text-[#003662] uppercase tracking-wide">
+            Memberships
+          </h1>
+          <div className="h-1 w-20 bg-green-700 mx-auto mt-4 rounded"></div>
+        </div>
         {/* <h1 className='text-4xl font-bold pt-4'>CERTIFICATIONS</h1> */}
         <div className="flex flex-wrap mx-auto  pt-12 2xl:w-[100%] justify-center">
           <img
@@ -217,13 +217,13 @@ function Home() {
         </div>
       </div>
 
-      <div className=" justify-center  items-center text-center py-8 ">
-        <h1
-          className="m-auto  p-6  lg:text-5xl sm:text-2xl font-bold lg:w-[42%] text-white bg-cover bg-center bg-no-repeat "
-          style={{ backgroundImage: `url(${rib})` }}
-        >
-          CERTIFICATE
-        </h1>
+      <div className="justify-center items-center text-center py-8 w-full">
+        <div className="text-center mb-12">
+          <h1 className="text-4xl md:text-5xl font-bold text-[#003662] uppercase tracking-wide">
+            Certificate
+          </h1>
+          <div className="h-1 w-20 bg-green-700 mx-auto mt-4 rounded"></div>
+        </div>
         <div className="flex items-center justify-center w-full px-4">
           <img
             src="/certificate.png"

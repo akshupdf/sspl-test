@@ -8,14 +8,17 @@ function Footer() {
   const body = "Hello, I would like to...";
 
   return (
-    <div className="w-full bg-[#003662] text-gray-300 border-t border-white/5 pt-12 pb-6">
-      <div className="max-w-7xl mx-auto px-4 md:px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+    <div className="w-full bg-[#003662] text-gray-300 border-t border-white/5 py-2">
+      <div className="max-w-7xl mx-auto px-4 md:px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-2">
         {/* Address & Hours */}
         <div className="space-y-4">
-          <h3 className="text-white font-bold text-lg font-serif tracking-wider uppercase">Address</h3>
+          <h3 className="text-white font-bold text-lg font-serif tracking-wider uppercase">
+            Address
+          </h3>
           <div className="space-y-2 text-sm">
             <p className="leading-relaxed">
-              94, 9th floor, Maker Chamber III, Nariman Point, Mumbai, Maharashtra - 400021, India
+              94, 9th floor, Maker Chamber III, Nariman Point, Mumbai,
+              Maharashtra - 400021, India
             </p>
             <p className="flex items-center gap-2 font-semibold pt-2">
               <FaClock className="text-blue-300" />
@@ -26,10 +29,15 @@ function Footer() {
 
         {/* Quick Links */}
         <div className="space-y-4 lg:pl-12">
-          <h3 className="text-white font-bold text-lg font-serif tracking-wider uppercase">Quick Links</h3>
+          <h3 className="text-white font-bold text-lg font-serif tracking-wider uppercase">
+            Quick Links
+          </h3>
           <ul className="space-y-2 text-sm">
             <li>
-              <Link to="/disclaimer" className="hover:text-white hover:underline transition-colors duration-300">
+              <Link
+                to="/disclaimer"
+                className="hover:text-white hover:underline transition-colors duration-300"
+              >
                 Disclaimer
               </Link>
             </li>
@@ -38,7 +46,9 @@ function Footer() {
 
         {/* Contact Info */}
         <div className="space-y-4">
-          <h3 className="text-white font-bold text-lg font-serif tracking-wider uppercase">Contact</h3>
+          <h3 className="text-white font-bold text-lg font-serif tracking-wider uppercase">
+            Contact
+          </h3>
           <div className="space-y-3 text-sm">
             <p className="flex items-center gap-2">
               <FaPhoneAlt className="text-blue-300" />
@@ -58,7 +68,9 @@ function Footer() {
 
         {/* Connect With Us */}
         <div className="space-y-4">
-          <h3 className="text-white font-bold text-lg font-serif tracking-wider uppercase">Connect With Us</h3>
+          <h3 className="text-white font-bold text-lg font-serif tracking-wider uppercase">
+            Connect With Us
+          </h3>
           <div className="flex gap-4">
             <a
               href="https://www.linkedin.com/company/satyanarayan-sekhsaria/"
@@ -89,7 +101,7 @@ function Footer() {
         </div>
       </div>
 
-      <div className="border-t border-white/5 pt-6 text-center text-xs text-gray-500">
+      <div className="border-t border-white/5 pt-2 text-center text-xs text-gray-500">
         Copyright © 2026 Satyanarayan Sekhsaria Pvt Ltd
       </div>
     </div>

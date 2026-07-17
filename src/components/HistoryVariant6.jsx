@@ -43,7 +43,7 @@ const timelineData = [
   },
   {
     year: 2006,
-    title: "Sekhsaria Chemicals Limited (sold) to Watson Pharma",
+    title: "Sekhsaria Chemicals Acquired by Watson Pharma",
     description:
       "Sekhsaria Chemicals Ltd was acquired by Watson Pharmaceuticals Inc, the third-largest pharmaceuticals company in the USA.",
     image: chem,
@@ -151,154 +151,154 @@ const HistoryVariant6 = () => {
         ref={containerRef}
         className="relative w-full bg-white hidden md:block h-[350vh]"
       >
-      {/* Sticky viewport wrapper */}
-      <div className="sticky top-20 h-[calc(100vh-5rem)] w-full overflow-hidden flex flex-col justify-center">
-        <div
-          ref={trackRef}
-          className="relative flex flex-row items-center gap-0 py-20 min-w-[3000px] px-32 transition-transform duration-100 ease-out will-change-transform"
-          style={{
-            transform: `translateX(-${scrollProgress * maxTranslate}px)`,
-          }}
-        >
-          {/* Main Horizontal Line */}
+        {/* Sticky viewport wrapper */}
+        <div className="sticky top-20 h-[calc(100vh-5rem)] w-full overflow-hidden flex flex-col justify-center">
           <div
-            className="absolute left-0 right-0 z-10"
+            ref={trackRef}
+            className="relative flex flex-row items-center gap-0 py-20 min-w-[3000px] px-32 transition-transform duration-100 ease-out will-change-transform"
             style={{
-              top: "50%",
-              transform: "translateY(-50%)",
+              transform: `translateX(-${scrollProgress * maxTranslate}px)`,
             }}
           >
-            <div className="h-[3px] w-full bg-gray-300" />
-          </div>
-          {timelineData.map((item, index) => {
-            const top = index % 2 === 0;
-            const distance = Math.abs(index - activeCardIndex);
+            {/* Main Horizontal Line */}
+            <div
+              className="absolute left-0 right-0 z-10"
+              style={{
+                top: "50%",
+                transform: "translateY(-50%)",
+              }}
+            >
+              <div className="h-[3px] w-full bg-gray-300" />
+            </div>
+            {timelineData.map((item, index) => {
+              const top = index % 2 === 0;
+              const distance = Math.abs(index - activeCardIndex);
 
-            // Focus Zoom variables based on active card center location
-            const scale = Math.max(0.82, 1 - distance * 0.08);
-            const opacity = Math.max(0.4, 1 - distance * 0.25);
+              // Focus Zoom variables based on active card center location
+              const scale = Math.max(0.82, 1 - distance * 0.08);
+              const opacity = Math.max(0.4, 1 - distance * 0.25);
 
-            return (
-              <div
-                key={item.year}
-                className="relative flex-shrink-0 flex flex-col items-center w-[340px] lg:h-[720px] md:h-auto sm:h-auto overflow-visible z-20 transition-all duration-300 ease-out lg:w-[340px] md:w-full md:max-w-[340px] sm:w-full sm:max-w-[320px]"
-                style={{
-                  transform: `scale(${scale})`,
-                }}
-              >
-                {/* TOP SECTION */}
-                <div className="w-full lg:h-[360px] md:h-auto sm:h-auto flex flex-col justify-end items-center pb-6 lg:pb-0">
-                  {top ? (
-                    <div className="flex flex-col items-center overflow-visible">
-                      <div
-                        className="w-[540px] h-[290px] bg-white border border-gray-150 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 flex flex-row overflow-hidden flex-shrink-0 lg:w-[540px] lg:h-[290px] lg:flex-row md:w-full md:h-auto md:flex-col sm:w-full sm:h-auto sm:flex-col"
-                        data-aos="fade-down"
-                      >
-                        {/* Left Side: Image container using object-contain to prevent cropping */}
-                        <div className="w-[180px] bg-gray-50 flex items-center justify-center p-3 flex-shrink-0 border-r border-gray-100 lg:w-[180px] lg:border-r md:w-full md:border-r-0 md:border-b sm:w-full sm:border-r-0 sm:border-b">
-                          <div className="w-full h-full bg-white rounded-xl overflow-hidden p-1 flex items-center justify-center shadow-inner lg:h-full md:h-[120px] md:w-full sm:h-[100px] sm:w-full">
-                            <img
-                              src={item.image}
-                              alt={item.title}
-                              className="max-w-full max-h-full object-contain"
-                            />
-                          </div>
-                        </div>
-
-                        {/* Right Side: Text content */}
-                        <div className="p-4 flex-1 flex flex-col overflow-y-auto text-left lg:p-4 md:p-3 sm:p-2">
-                          <div className="space-y-1.5">
-                            <h4
-                              className="text-sm font-bold font-serif uppercase tracking-wider mb-1.5 lg:text-sm md:text-xs sm:text-[10px]"
-                              style={{ color: item.color }}
-                            >
-                              {item.title}
-                            </h4>
-                            <p className="text-xs text-gray-500 leading-relaxed text-justify overflow-y-auto pr-1 lg:text-xs md:text-[10px] sm:text-[9px]">
-                              {item.description}
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                      {/* Connector line */}
-                      <div
-                        className="w-[2px] h-10 mt-4"
-                        style={{ background: item.color }}
-                      ></div>
-                    </div>
-                  ) : (
-                    /* Show the Year above the timeline for bottom items */
-                    <div
-                      className="text-2xl font-extrabold font-serif mb-4 flex-shrink-0 lg:text-2xl md:text-xl sm:text-lg"
-                      style={{ color: item.color }}
-                    >
-                      {item.year}
-                    </div>
-                  )}
-                </div>
-
-                {/* DOT */}
+              return (
                 <div
-                  className="w-5 h-5 rounded-full border-4 border-white z-30 shadow-md flex-shrink-0 lg:w-5 lg:h-5 md:w-4 md:h-4 sm:w-3 sm:h-3 lg:absolute lg:top-1/2 lg:left-1/2 lg:-translate-x-1/2 lg:-translate-y-1/2 relative top-0 left-0 translate-x-0 translate-y-0 my-2 lg:my-0"
-                  style={{ background: item.color }}
-                />
+                  key={item.year}
+                  className="relative flex-shrink-0 flex flex-col items-center w-[340px] h-[620px] overflow-visible z-20 transition-all duration-300 ease-out"
+                  style={{
+                    transform: `scale(${scale})`,
+                  }}
+                >
+                  {/* TOP SECTION */}
+                  <div className="w-full h-[310px] flex flex-col justify-end items-center pb-6">
+                    {top ? (
+                      <div className="flex flex-col items-center overflow-visible">
+                        <div
+                          className="w-[540px] h-[260px] bg-white border border-gray-150 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 flex flex-row overflow-hidden flex-shrink-0"
+                          data-aos="fade-down"
+                        >
+                          {/* Left Side: Image container using object-contain to prevent cropping */}
+                          <div className="w-[180px] bg-gray-50 flex items-center justify-center p-3 flex-shrink-0 border-r border-gray-100">
+                            <div className="w-full h-full bg-white rounded-xl overflow-hidden p-1 flex items-center justify-center shadow-inner">
+                              <img
+                                src={item.image}
+                                alt={item.title}
+                                className="max-w-full max-h-full object-contain"
+                              />
+                            </div>
+                          </div>
 
-                {/* BOTTOM SECTION */}
-                <div className="w-full lg:h-[360px] md:h-auto sm:h-auto flex flex-col justify-start items-center pt-6 lg:pt-0">
-                  {!top ? (
-                    <div className="flex flex-col items-center overflow-visible">
-                      {/* Connector line */}
-                      <div
-                        className="w-[2px] h-10 mb-4"
-                        style={{ background: item.color }}
-                      ></div>
-                      <div
-                        className="w-[540px] h-[240px] bg-white border border-gray-150 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 flex flex-row overflow-hidden flex-shrink-0 lg:w-[540px] lg:h-[240px] lg:flex-row md:w-full md:h-auto md:flex-col sm:w-full sm:h-auto sm:flex-col"
-                        data-aos="fade-up"
-                      >
-                        {/* Left Side: Image container using object-contain to prevent cropping */}
-                        <div className="w-[180px] bg-gray-50 flex items-center justify-center p-3 flex-shrink-0 border-r border-gray-100 lg:w-[180px] lg:border-r md:w-full md:border-r-0 md:border-b sm:w-full sm:border-r-0 sm:border-b">
-                          <div className="w-full h-full bg-white rounded-xl overflow-hidden p-1 flex items-center justify-center shadow-inner lg:h-full md:h-[120px] md:w-full sm:h-[100px] sm:w-full">
-                            <img
-                              src={item.image}
-                              alt={item.title}
-                              className="max-w-full max-h-full object-contain"
-                            />
+                          {/* Right Side: Text content */}
+                          <div className="p-4 flex-1 flex flex-col overflow-y-auto text-left">
+                            <div className="space-y-1.5 flex-1 flex flex-col min-h-0">
+                              <h4
+                                className="text-sm font-bold font-serif uppercase tracking-wider mb-1.5"
+                                style={{ color: item.color }}
+                              >
+                                {item.title}
+                              </h4>
+                              <p className="text-xs text-gray-500 leading-relaxed text-justify overflow-y-auto pr-1 flex-1 min-h-0">
+                                {item.description}
+                              </p>
+                            </div>
                           </div>
                         </div>
+                        {/* Connector line */}
+                        <div
+                          className="w-[2px] h-10 mt-4"
+                          style={{ background: item.color }}
+                        ></div>
+                      </div>
+                    ) : (
+                      /* Show the Year above the timeline for bottom items */
+                      <div
+                        className="text-2xl font-extrabold font-serif mb-4 flex-shrink-0"
+                        style={{ color: item.color }}
+                      >
+                        {item.year}
+                      </div>
+                    )}
+                  </div>
 
-                        {/* Right Side: Text content */}
-                        <div className="p-4 flex-1 flex flex-col overflow-y-auto text-left lg:p-4 md:p-3 sm:p-2">
-                          <div className="space-y-1.5">
-                            <h4
-                              className="text-sm font-bold font-serif uppercase tracking-wider mb-1.5 lg:text-sm md:text-xs sm:text-[10px]"
-                              style={{ color: item.color }}
-                            >
-                              {item.title}
-                            </h4>
-                            <p className="text-xs text-gray-500 leading-relaxed text-justify overflow-y-auto pr-1 lg:text-xs md:text-[10px] sm:text-[9px]">
-                              {item.description}
-                            </p>
+                  {/* DOT */}
+                  <div
+                    className="w-5 h-5 rounded-full border-4 border-white z-30 shadow-md flex-shrink-0 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+                    style={{ background: item.color }}
+                  />
+
+                  {/* BOTTOM SECTION */}
+                  <div className="w-full h-[310px] flex flex-col justify-start items-center pt-6">
+                    {!top ? (
+                      <div className="flex flex-col items-center overflow-visible">
+                        {/* Connector line */}
+                        <div
+                          className="w-[2px] h-10 mb-4"
+                          style={{ background: item.color }}
+                        ></div>
+                        <div
+                          className="w-[540px] h-[260px] bg-white border border-gray-150 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 flex flex-row overflow-hidden flex-shrink-0"
+                          data-aos="fade-up"
+                        >
+                          {/* Left Side: Image container using object-contain to prevent cropping */}
+                          <div className="w-[180px] bg-gray-50 flex items-center justify-center p-3 flex-shrink-0 border-r border-gray-100">
+                            <div className="w-full h-full bg-white rounded-xl overflow-hidden p-1 flex items-center justify-center shadow-inner">
+                              <img
+                                src={item.image}
+                                alt={item.title}
+                                className="max-w-full max-h-full object-contain"
+                              />
+                            </div>
+                          </div>
+
+                          {/* Right Side: Text content */}
+                          <div className="p-4 flex-1 flex flex-col overflow-y-auto text-left">
+                            <div className="space-y-1.5 flex-1 flex flex-col min-h-0">
+                              <h4
+                                className="text-sm font-bold font-serif uppercase tracking-wider mb-1.5"
+                                style={{ color: item.color }}
+                              >
+                                {item.title}
+                              </h4>
+                              <p className="text-xs text-gray-500 leading-relaxed text-justify overflow-y-auto pr-1 flex-1 min-h-0">
+                                {item.description}
+                              </p>
+                            </div>
                           </div>
                         </div>
                       </div>
-                    </div>
-                  ) : (
-                    /* Show the Year below the timeline for top items */
-                    <div
-                      className="text-2xl font-extrabold font-serif mt-4 flex-shrink-0 lg:text-2xl md:text-xl sm:text-lg"
-                      style={{ color: item.color }}
-                    >
-                      {item.year}
-                    </div>
-                  )}
+                    ) : (
+                      /* Show the Year below the timeline for top items */
+                      <div
+                        className="text-2xl font-extrabold font-serif mt-4 flex-shrink-0"
+                        style={{ color: item.color }}
+                      >
+                        {item.year}
+                      </div>
+                    )}
+                  </div>
                 </div>
-              </div>
-            );
-          })}
+              );
+            })}
+          </div>
         </div>
       </div>
-    </div>
 
       {/* Mobile Timeline - Hidden on desktop */}
       <div className="block md:hidden py-8 px-4">
@@ -306,11 +306,11 @@ const HistoryVariant6 = () => {
           {timelineData.map((item) => (
             <div
               key={item.year}
-              className="bg-white border border-gray-200 rounded-2xl shadow-lg overflow-hidden"
+              className="bg-white border border-gray-200 rounded-2xl shadow-lg overflow-hidden h-[340px] flex flex-col"
               data-aos="fade-up"
             >
               {/* Image */}
-              <div className="h-[140px] bg-gray-50 flex items-center justify-center p-3">
+              <div className="h-[140px] bg-gray-50 flex items-center justify-center p-3 flex-shrink-0">
                 <div className="h-full w-full bg-white rounded-xl overflow-hidden p-2 flex items-center justify-center shadow-inner">
                   <img
                     src={item.image}
@@ -321,8 +321,8 @@ const HistoryVariant6 = () => {
               </div>
 
               {/* Content */}
-              <div className="p-4">
-                <div className="flex items-center gap-3 mb-3">
+              <div className="p-4 flex-1 flex flex-col overflow-y-auto">
+                <div className="flex items-center gap-3 mb-2 flex-shrink-0">
                   {/* Dot */}
                   <div
                     className="w-4 h-4 rounded-full border-3 border-white shadow-sm flex-shrink-0"
@@ -338,12 +338,12 @@ const HistoryVariant6 = () => {
                 </div>
 
                 <h4
-                  className="text-sm font-bold font-serif uppercase tracking-wider mb-2"
+                  className="text-sm font-bold font-serif uppercase tracking-wider mb-1 flex-shrink-0"
                   style={{ color: item.color }}
                 >
                   {item.title}
                 </h4>
-                <p className="text-xs text-gray-600 leading-relaxed">
+                <p className="text-xs text-gray-600 leading-relaxed overflow-y-auto flex-1 pr-1 text-justify">
                   {item.description}
                 </p>
               </div>
