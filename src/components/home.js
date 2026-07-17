@@ -237,15 +237,12 @@ function Home() {
         data-aos="zoom-in"
         data-aos-duration="1000"
       >
-        <h2
-          className="mx-auto p-4 text-center text-white font-bold
-               text-3xl lg:text-5xl
-               w-[280px] lg:w-[500px]
-               bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url(${rib})` }}
-        >
-          REVIEWS
-        </h2>
+        <div className="text-center mb-12">
+          <h2 className="text-4xl md:text-5xl font-bold text-[#003662] uppercase tracking-wide">
+            Reviews
+          </h2>
+          <div className="h-1 w-20 bg-green-700 mx-auto mt-4 rounded"></div>
+        </div>
         <Swiper
           grabCursor
           loop
