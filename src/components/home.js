@@ -85,14 +85,14 @@ function Home() {
           data-aos="fade-left"
           data-aos-duration="3000"
         >
-          <div className="mb-8">
-            <h1 className="lg:text-7xl sm:text-5xl xl:text-8xl mb-6 font-serif leading-tight text-[#003662] drop-shadow-sm">
+          <div className="mb-4">
+            <h1 className="lg:text-7xl sm:text-5xl xl:text-8xl  font-serif leading-tight text-[#003662] drop-shadow-sm">
               SSPL
             </h1>
           </div>
 
           <p className="text-lg sm:text-base lg:text-xl mb-[6rem] text-gray-800 leading-relaxed max-w-5xl mx-auto font-medium">
-            SSPL is focused on Exporting and supplying of a wide range of
+            SSPL is focused on exporting and supplying of a wide range of
             agricultural commodities like Castor Seed, Guar Seed, Castor Oil
             (FSG Grade), Cashew Kernels , Pulses , Chickpeas and Pigeon Peas .
             <br></br>
@@ -101,7 +101,7 @@ function Home() {
           <div className="flex flex-col sm:flex-row gap-8 justify-center items-center">
             <Link
               to="/about"
-              className="group inline-flex items-center justify-center px-10 py-5 text-lg font-bold text-white bg-green-800 hover:bg-green-700 rounded-xl shadow-xl transition-all duration-500 hover:shadow-2xl hover:scale-105"
+              className="group inline-flex items-center justify-center px-10 py-5 text-lg font-bold text-white bg-[#003662] hover:bg-[#004882] rounded-xl shadow-xl transition-all duration-500 hover:shadow-2xl hover:scale-105"
             >
               <span>Discover Our Story</span>
             </Link>
@@ -109,12 +109,12 @@ function Home() {
         </div>
       </div>
 
-      <div className="w-full text-center items-center py-8">
+      <div className="max-w-7xl mx-auto px-4 md:px-8 py-16 text-center w-full">
         <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold text-[#003662] uppercase tracking-wide">
+          <h2 className="text-4xl md:text-5xl font-bold text-[#003662] uppercase tracking-wide">
             Our Products
-          </h1>
-          <div className="h-1 w-20 bg-green-700 mx-auto mt-4 rounded"></div>
+          </h2>
+          <div className="h-1 w-20 bg-[#003662] mx-auto mt-4 rounded"></div>
         </div>
         <Swiper
           grabCursor
@@ -141,25 +141,37 @@ function Home() {
             },
           }}
           modules={[Pagination, Navigation, Autoplay]}
-          className="w-full mt-8"
+          className="w-full mt-8 py-4"
         >
           {products.map((product) => (
-            <SwiperSlide key={product.name}>
-              <div className="bg-white rounded-3xl shadow-xl p-5 h-[420px] flex flex-col">
-                <div className="h-[260px] w-full  flex items-center justify-center p-4">
-                  <img
-                    src={product.image}
-                    alt={product.name}
-                    className="w-full h-full object-contain"
-                  />
-                </div>
+            <SwiperSlide key={product.name} className="py-2">
+              <Link to="/products" className="block group">
+                <div className="bg-white rounded-2xl border border-gray-100 hover:border-gray-200/80 shadow-sm hover:shadow-xl transition-all duration-500 p-5 h-[390px] flex flex-col cursor-pointer">
+                  <div className="h-[230px] w-full bg-gray-50/40 rounded-xl flex items-center justify-center p-6 transition-all duration-500 group-hover:bg-gray-100/30 relative overflow-hidden">
+                    <img
+                      src={product.image}
+                      alt={product.name}
+                      className="max-h-full max-w-full object-contain mix-blend-multiply transform group-hover:scale-[1.3] transition-transform duration-500"
+                    />
+                  </div>
 
-                <div className="flex-1 flex items-center justify-center">
-                  <h3 className="text-center text-xl lg:text-2xl font-semibold">
-                    {product.name}
-                  </h3>
+                  {/* Title & Premium details */}
+                  <div className="flex-1 flex flex-col justify-between pt-5 px-1">
+                    <div className="space-y-2 text-left">
+                      <h3 className="text-xl font-bold text-gray-900 group-hover:text-[#003662] transition-colors duration-300">
+                        {product.name}
+                      </h3>
+                      <div className="w-8 h-0.5 bg-[#003662]/60 transition-all duration-300 group-hover:w-16"></div>
+                    </div>
+                    <div className="flex items-center text-xs font-bold uppercase tracking-wider text-[#003662] transition-colors duration-300 mt-4 text-left">
+                      View Details
+                      <span className="ml-1.5 transform group-hover:translate-x-1 transition-transform duration-300">
+                        &rarr;
+                      </span>
+                    </div>
+                  </div>
                 </div>
-              </div>
+              </Link>
             </SwiperSlide>
           ))}
         </Swiper>
@@ -168,12 +180,12 @@ function Home() {
       <div className="w-[100%] mx-auto items-center justify-center flex mb-10 mt-10">
         <Link
           to="/products"
-          class="relative inline-flex items-center justify-start px-6 py-3 overflow-hidden font-medium transition-all bg-green-800 rounded-xl group"
+          class="relative inline-flex items-center justify-start px-6 py-3 overflow-hidden font-medium transition-all bg-[#003662] rounded-xl group"
         >
-          <span class="absolute top-0 right-0 inline-block w-4 h-4 transition-all duration-500 ease-in-out bg-red-700 rounded group-hover:-mr-4 group-hover:-mt-4">
+          <span class="absolute top-0 right-0 inline-block w-4 h-4 transition-all duration-500 ease-in-out bg-[#004882] rounded group-hover:-mr-4 group-hover:-mt-4">
             <span class="absolute top-0 right-0 w-5 h-5 rotate-45 translate-x-1/2 -translate-y-1/2 bg-white"></span>
           </span>
-          <span class="absolute bottom-0 left-0 w-full h-full transition-all duration-500 ease-in-out delay-200 -translate-x-full translate-y-full bg-red-600 rounded-2xl group-hover:mb-12 group-hover:translate-x-0"></span>
+          <span class="absolute bottom-0 left-0 w-full h-full transition-all duration-500 ease-in-out delay-200 -translate-x-full translate-y-full bg-[#004882] rounded-2xl group-hover:mb-12 group-hover:translate-x-0"></span>
           <span class="relative w-full text-left text-white transition-colors duration-200 ease-in-out group-hover:text-white">
             Know More
           </span>
@@ -182,37 +194,36 @@ function Home() {
 
       <div className="justify-center pt-10 items-center text-center w-full mb-10">
         <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold text-[#003662] uppercase tracking-wide">
+          <h2 className="text-4xl md:text-5xl font-bold text-[#003662] uppercase tracking-wide">
             Memberships
-          </h1>
-          <div className="h-1 w-20 bg-green-700 mx-auto mt-4 rounded"></div>
+          </h2>
+          <div className="h-1 w-20 bg-[#003662] mx-auto mt-4 rounded"></div>
         </div>
-        {/* <h1 className='text-4xl font-bold pt-4'>CERTIFICATIONS</h1> */}
-        <div className="flex flex-wrap mx-auto  pt-12 2xl:w-[100%] justify-center">
+        <div className="flex flex-wrap items-center justify-center gap-8 max-w-7xl mx-auto pt-8 px-6">
           <img
             src={f}
-            alt="none"
-            className="m-4 sm:w-32 xl:w-[240px] xl:[120px] 2xl:w-[300px] 2xl:h-[180px]"
+            alt="Membership Logo 1"
+            className="h-16 sm:h-20 md:h-24 lg:h-28 w-auto object-contain transition-all duration-300 hover:scale-105"
           />
           <img
             src={g}
-            alt="none"
-            className="m-4 sm:w-32 xl:w-[200px] 2xl:w-[250px]"
+            alt="Membership Logo 2"
+            className="h-16 sm:h-20 md:h-24 lg:h-28 w-auto object-contain transition-all duration-300 hover:scale-105"
           />
           <img
             src={wcsf}
-            alt="none"
-            className="m-4 sm:w-32 xl:w-[200px] 2xl:w-[250px] p-4"
+            alt="Membership Logo 3"
+            className="h-16 sm:h-20 md:h-24 lg:h-28 w-auto object-contain p-3 transition-all duration-300 hover:scale-105"
           />
           <img
             src={i}
-            alt="none"
-            className="m-4 sm:w-32 xl:w-[200px] 2xl:w-[250px] p-4"
+            alt="Membership Logo 4"
+            className="h-16 sm:h-20 md:h-24 lg:h-28 w-auto object-contain p-3 transition-all duration-300 hover:scale-105"
           />
           <img
             src={h}
-            alt="none"
-            className="m-4 sm:w-32 xl:w-[200px] 2xl:w-[250px]"
+            alt="Membership Logo 5"
+            className="h-16 sm:h-20 md:h-24 lg:h-28 w-auto object-contain transition-all duration-300 hover:scale-105"
           />
         </div>
       </div>
@@ -222,7 +233,7 @@ function Home() {
           <h1 className="text-4xl md:text-5xl font-bold text-[#003662] uppercase tracking-wide">
             Certificate
           </h1>
-          <div className="h-1 w-20 bg-green-700 mx-auto mt-4 rounded"></div>
+          <div className="h-1 w-20 bg-[#003662] mx-auto mt-4 rounded"></div>
         </div>
         <div className="flex items-center justify-center w-full px-4">
           <img
@@ -241,7 +252,7 @@ function Home() {
           <h2 className="text-4xl md:text-5xl font-bold text-[#003662] uppercase tracking-wide">
             Reviews
           </h2>
-          <div className="h-1 w-20 bg-green-700 mx-auto mt-4 rounded"></div>
+          <div className="h-1 w-20 bg-[#003662] mx-auto mt-4 rounded"></div>
         </div>
         <Swiper
           grabCursor

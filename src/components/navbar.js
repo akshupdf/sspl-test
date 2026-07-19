@@ -21,7 +21,7 @@ function Navbar() {
             <img
               src={logo}
               alt="Logo"
-              className="h-12 w-auto mt-2 object-contain"
+              className="h-14 lg:h-16   w-auto object-contain"
             />
             <div className="text-left hidden md:block">
               <span className="text-white font-bold text-lg xl:text-xl block tracking-wide font-serif uppercase">
@@ -90,7 +90,7 @@ function Navbar() {
               <img
                 src={certify}
                 alt="Certification"
-                className="h-10 w-auto object-contain lg:ml-2"
+                className="h-14 lg:h-16 w-auto object-contain lg:ml-2"
               />
             </li>
           </ul>

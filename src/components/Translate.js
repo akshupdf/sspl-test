@@ -2,7 +2,7 @@ import React from "react";
 
 const Translate = () => {
   return (
-    <div className="flex justify-end w-full text-black fixed top-[4.2rem] right-2 p-4 z-20">
+    <div className="flex justify-end w-full text-black fixed top-[4.5rem] lg:top-[5rem] right-2 p-4 z-20">
       <select
         onChange={(e) => (window.location.href = e.target.value)}
         className="border border-black p-2 rounded-lg cursor-pointer "
@@ -24,6 +24,12 @@ const Translate = () => {
         </option>
         <option value="https://ssp--limited-com.translate.goog/?_x_tr_sl=en&_x_tr_tl=ms&_x_tr_hl=en-US&_x_tr_pto=wapp">
           Malay
+        </option>
+        <option value="https://ssp--limited-com.translate.goog/?_x_tr_sl=en&_x_tr_tl=it&_x_tr_hl=en-US&_x_tr_pto=wapp">
+          Italian
+        </option>
+        <option value="https://ssp--limited-com.translate.goog/?_x_tr_sl=en&_x_tr_tl=zh-CN&_x_tr_hl=en-US&_x_tr_pto=wapp">
+          Chinese
         </option>
       </select>
     </div>

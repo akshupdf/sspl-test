@@ -29,9 +29,6 @@ function Footer() {
 
         {/* Quick Links */}
         <div className="space-y-4 lg:pl-12">
-          <h3 className="text-white font-bold text-lg font-serif tracking-wider uppercase">
-            Quick Links
-          </h3>
           <ul className="space-y-2 text-sm">
             <li>
               <Link

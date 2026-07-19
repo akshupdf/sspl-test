@@ -63,7 +63,7 @@ function About() {
       <div className="w-full bg-white py-4 border-t border-b border-gray-150">
         <div className="text-center mb-4">
           <h2 className="text-3xl md:text-4xl font-bold text-[#003662] uppercase tracking-wide">
-            History
+            Milestone
           </h2>
           <div className="h-1 w-20 bg-green-700 mx-auto mt-4 rounded"></div>
         </div>
