@@ -103,7 +103,7 @@ function Product() {
                   {product.title}
                 </h2>
 
-                <p className="text-gray-600 text-base lg:text-lg leading-relaxed mb-6">
+                <p className="text-gray-600 text-base lg:text-lg leading-relaxed mb-6 text-justify">
                   {product.description}
                 </p>
 

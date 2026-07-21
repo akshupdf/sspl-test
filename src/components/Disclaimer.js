@@ -14,7 +14,7 @@ function Disclaimer() {
         <div className="bg-white border border-gray-100 rounded-2xl p-6 md:p-10 shadow-lg text-gray-700 text-justify text-base md:text-lg leading-relaxed space-y-6">
           <div>
             <div>
-              <ul className="list-disc">
+              <ul>
                 <li>
                   <b> Satyanarayan Sekhsaria Pvt. Ltd. (SSPL)</b>
                   <span>
@@ -38,12 +38,12 @@ function Disclaimer() {
                   </span>
                 </li>
               </ul>
-              <ul className="list-disc">
-                <li>
-                  <b>Products Features and Specifications :</b>
+              <ul className="list-none my-4">
+                <li className="font-bold text-[#003662] text-xl">
+                  Products Features and Specifications :
                 </li>
               </ul>
-              <ul className="list-disc">
+              <ul>
                 <li>
                   <span>
                     namely Technical, Physical and Benefits mentioned in the
@@ -75,7 +75,7 @@ function Disclaimer() {
                   SSPL<span>.</span>
                 </li>
               </ul>
-              <ul className="list-disc">
+              <ul>
                 <li>
                   <b>SSPL</b>
                   <span>
@@ -95,7 +95,7 @@ function Disclaimer() {
                   </span>
                 </li>
               </ul>
-              <ul className="list-disc">
+              <ul>
                 <li>
                   <span>
                     The information on this site has been concluded in good
@@ -119,7 +119,7 @@ function Disclaimer() {
                   </span>
                 </li>
               </ul>
-              <ul className="list-disc">
+              <ul>
                 <li>
                   <span>The Web-site&nbsp;</span>
                   <a href="http://ssp-limited.com/">
@@ -135,7 +135,7 @@ function Disclaimer() {
                   </span>
                 </li>
               </ul>
-              <ul className="list-disc">
+              <ul>
                 <li>
                   <a href="http://ssp-limited.com/">
                     <span>http://ssp-limited.com/</span>
@@ -155,7 +155,7 @@ function Disclaimer() {
                   </span>
                 </li>
               </ul>
-              <ul className="list-disc">
+              <ul>
                 <li>
                   <b>SSPL</b>
                   <span>
@@ -167,7 +167,7 @@ function Disclaimer() {
                   </span>
                 </li>
               </ul>
-              <ul className="list-disc">
+              <ul>
                 <li>
                   <span>In no event or circumstances shall </span>
                   <b>SSPL</b>
@@ -182,7 +182,7 @@ function Disclaimer() {
                   </span>
                 </li>
               </ul>
-              <ul className="list-disc">
+              <ul>
                 <li>
                   <b>SSPL</b>
                   <span>
@@ -211,7 +211,7 @@ function Disclaimer() {
                   </span>
                 </li>
               </ul>
-              <ul className="list-disc">
+              <ul>
                 <li>
                   <span>
                     Though our website and application is secured by appropriate
@@ -223,12 +223,10 @@ function Disclaimer() {
                   </span>
                 </li>
               </ul>
-              <ul className="list-disc">
-                <li>
-                  <b>
-                    Collection of Personally Identifiable Information and other
-                    Information:
-                  </b>
+              <ul className="list-none my-4">
+                <li className="font-bold text-[#003662] text-xl">
+                  Collection of Personally Identifiable Information and other
+                  Information:
                 </li>
               </ul>
               <ul>
@@ -313,9 +311,9 @@ function Disclaimer() {
                   </ul>
                 </li>
               </ul>
-              <ul className="list-disc">
-                <li>
-                  <b>Privacy Policy</b>
+              <ul className="list-none my-4">
+                <li className="font-bold text-[#003662] text-xl">
+                  Privacy Policy
                 </li>
               </ul>
               <ul>
@@ -359,9 +357,9 @@ function Disclaimer() {
                   </ul>
                 </li>
               </ul>
-              <ul className="list-disc">
-                <li>
-                  <b>Cookies</b>
+              <ul className="list-none my-4">
+                <li className="font-bold text-[#003662] text-xl">
+                  Cookies
                 </li>
               </ul>
               <ul>
@@ -429,7 +427,7 @@ function Disclaimer() {
                   </ul>
                 </li>
               </ul>
-              <ul className="list-disc">
+              <ul>
                 <li>
                   <span>
                     To the fullest extent permitted under applicable law,{" "}
@@ -446,7 +444,7 @@ function Disclaimer() {
                   </span>
                 </li>
               </ul>
-              <ul className="list-disc">
+              <ul>
                 <li>
                   <span>Though </span>
                   <b>SSPL</b>
@@ -464,7 +462,7 @@ function Disclaimer() {
                   </span>
                 </li>
               </ul>
-              <ul className="list-disc">
+              <ul>
                 <li>
                   <span>
                     If you feel that any of the linked website contains any
@@ -478,7 +476,7 @@ function Disclaimer() {
                 </li>
               </ul>
               <ul>
-                <li className="list-disc">
+                <li className="list-none font-bold text-[#003662] text-xl my-4">
                   <b>Your Consent</b>
                 </li>
                 <li>
@@ -520,7 +518,7 @@ function Disclaimer() {
                 </li>
               </ul>
               <ul>
-                <li className="list-disc">
+                <li className="list-none font-bold text-[#003662] text-xl my-4">
                   <b>Applicable Law and Jurisdiction</b>
                 </li>
               </ul>

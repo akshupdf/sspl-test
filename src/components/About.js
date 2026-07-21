@@ -60,9 +60,9 @@ function About() {
       </div>
 
       {/* History Section */}
-      <div className="w-full bg-white py-4 border-t border-b border-gray-150">
+      <div className="w-full bg-white py-4 ">
         <div className="text-center mb-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#003662] uppercase tracking-wide">
+          <h2 className="text-4xl md:text-5xl font-bold text-[#003662] uppercase tracking-wide">
             Milestone
           </h2>
           <div className="h-1 w-20 bg-green-700 mx-auto mt-4 rounded"></div>
@@ -73,7 +73,7 @@ function About() {
       </div>
 
       {/* Management Section */}
-      <div className="min-h-screen w-full flex flex-col items-center justify-center ">
+      <div className="min-h-screen w-full flex flex-col items-center justify-center bg-white">
         <div className="text-center mb-12">
           <h1 className="text-4xl md:text-5xl font-bold text-[#003662] uppercase tracking-wide">
             Our Management
@@ -92,7 +92,7 @@ function About() {
             <h1 className="text-xl font-bold text-center">
               Mr. Pulkit Sekhsaria
             </h1>
-            <p className="text-justify">
+            <p className="text-gray-700 text-base md:text-lg leading-relaxed text-justify">
               Pulkit Sekhsaria is the Managing Director of Satyanarayan
               Sekhsaria Pvt. Ltd. (SSPL). Pulkit has been actively involved in
               investments and wealth management across various fields. Under his
@@ -113,7 +113,7 @@ function About() {
               {" "}
               Mr. Rajaram Prabhu
             </h1>
-            <p className="text-justify">
+            <p className="text-gray-700 text-base md:text-lg leading-relaxed text-justify">
               Mr. Rajaram Prabhu is a Director at SSPL. With over 4 decades of
               experience in the commodity trading sector, he brings deep market
               insight and strategic expertise. His leadership is defined by a
@@ -135,7 +135,7 @@ function About() {
             <h1 className="text-xl font-bold text-center">
               Mr. Ankush Pitale{" "}
             </h1>
-            <p className="text-jsustify">
+            <p className="text-gray-700 text-base md:text-lg leading-relaxed text-justify">
               Mr. Ankush Pitale is a Director at SSPL. Prior to joining SSPL, he
               worked for over 25 years in investment banking with leading
               financial institutions, including JM Financial, JP Morgan,
@@ -158,7 +158,7 @@ function About() {
             <h1 className="text-xl font-bold text-center">
               Mr. Lakshit Desai{" "}
             </h1>
-            <p className="text-justify">
+            <p className="text-gray-700 text-base md:text-lg leading-relaxed text-justify">
               Mr. Lakshit Desai serves as a Director at SSPL, bringing over 27
               years of experience in taxation, audit, accounting, and finance. A
               Chartered Accountant with bachelor’s degrees in commerce and law,

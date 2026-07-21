@@ -43,9 +43,9 @@ const timelineData = [
   },
   {
     year: 2006,
-    title: "Sekhsaria Chemicals Acquired by Watson Pharma",
+    title: "Sekhsaria chemicals sold to Watson Pharma",
     description:
-      "Sekhsaria Chemicals Ltd was acquired by Watson Pharmaceuticals Inc, the third-largest pharmaceuticals company in the USA.",
+      "Sekhsaria Chemicals Ltd was sold to Watson Pharmaceuticals Inc, the third-largest pharmaceuticals company in the USA.",
     image: chem,
     color: "#26a69a",
   },
@@ -214,7 +214,7 @@ const HistoryVariant6 = () => {
                               >
                                 {item.title}
                               </h4>
-                              <p className="text-xs text-gray-500 leading-relaxed text-justify overflow-y-auto pr-1 flex-1 min-h-0">
+                              <p className="text-sm text-gray-500 leading-relaxed text-justify   pr-1 flex-1 min-h-0">
                                 {item.description}
                               </p>
                             </div>
@@ -269,14 +269,14 @@ const HistoryVariant6 = () => {
 
                           {/* Right Side: Text content */}
                           <div className="p-4 flex-1 flex flex-col overflow-y-auto text-left">
-                            <div className="space-y-1.5 flex-1 flex flex-col min-h-0">
+                            <div className="space-y-1.8 flex-1 flex flex-col min-h-0">
                               <h4
-                                className="text-sm font-bold font-serif uppercase tracking-wider mb-1.5"
+                                className="text-sm font-bold font-serif uppercase tracking-wider "
                                 style={{ color: item.color }}
                               >
                                 {item.title}
                               </h4>
-                              <p className="text-xs text-gray-500 leading-relaxed text-justify overflow-y-auto pr-1 flex-1 min-h-0">
+                              <p className="text-sm text-gray-500  text-justify   pr-1 flex-1 min-h-0">
                                 {item.description}
                               </p>
                             </div>

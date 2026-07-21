@@ -457,7 +457,7 @@ function Contact() {
               <div className="flex items-center gap-2 mb-2 text-[#003662]">
                 <HiBuildingOffice className="text-2xl" />
                 <h2 className="text-2xl font-bold font-serif">
-                  SATYANARAYAN SEKHSARIA PVT. LTD
+                  SATYANARAYAN SEKHSARIA PVT. LTD.
                 </h2>
               </div>
               <div className="pl-8 text-gray-600">
