@@ -94,7 +94,7 @@ function Home() {
           <p className="text-lg sm:text-base lg:text-xl mb-[6rem] text-gray-800 leading-relaxed max-w-5xl mx-auto font-medium">
             SSPL is focused on exporting and supplying of a wide range of
             agricultural commodities like Castor Seed, Guar Seed, Castor Oil
-            (FSG Grade), Cashew Kernels , Pulses , Chickpeas and Pigeon Peas .
+            (FSG Grade), Cashew Kernels, Pulses, Chickpeas and Pigeon Peas.
             <br></br>
           </p>
 

@@ -1,4 +1,5 @@
 import { ToTop } from "./ToTop";
+import { FaChevronRight } from "react-icons/fa";
 
 function Disclaimer() {
   return (
@@ -38,15 +39,18 @@ function Disclaimer() {
                   </span>
                 </li>
               </ul>
-              <ul className="list-none my-4">
-                <li className="font-bold text-[#003662] text-xl">
-                  Products Features and Specifications :
-                </li>
-              </ul>
+              <div className="my-6">
+                <h2 className="flex items-start md:items-center font-bold text-[#003662] text-xl md:text-2xl border-b border-gray-200 pb-2 mb-4">
+                  <span className="inline-flex items-center justify-center w-7 h-7 rounded-lg bg-blue-100 text-blue-700 mr-3 flex-shrink-0 mt-0.5 md:mt-0 shadow-sm">
+                    <FaChevronRight className="text-xs md:text-sm" />
+                  </span>
+                  <span>Products Features and Specifications :</span>
+                </h2>
+              </div>
               <ul>
                 <li>
                   <span>
-                    namely Technical, Physical and Benefits mentioned in the
+                    Namely Technical, Physical and Benefits mentioned in the
                     entire product specifications pages are indicative. These
                     specifications represent the broader features of the product
                     line. The actual product may differ from that shown on the
@@ -223,15 +227,20 @@ function Disclaimer() {
                   </span>
                 </li>
               </ul>
-              <ul className="list-none my-4">
-                <li className="font-bold text-[#003662] text-xl">
-                  Collection of Personally Identifiable Information and other
-                  Information:
-                </li>
-              </ul>
+              <div className="my-6">
+                <h2 className="flex items-start md:items-center font-bold text-[#003662] text-xl md:text-2xl border-b border-gray-200 pb-2 mb-4">
+                  <span className="inline-flex items-center justify-center w-7 h-7 rounded-lg bg-blue-100 text-blue-700 mr-3 flex-shrink-0 mt-0.5 md:mt-0 shadow-sm">
+                    <FaChevronRight className="text-xs md:text-sm" />
+                  </span>
+                  <span>
+                    Collection of Personally Identifiable Information and other
+                    Information:
+                  </span>
+                </h2>
+              </div>
               <ul>
                 <li>
-                  <ul className="ml-8">
+                  <ul>
                     <li>
                       <span>When you use our Website, </span>
                       <b>SSPL</b>
@@ -257,7 +266,7 @@ function Disclaimer() {
               </ul>
               <ul>
                 <li>
-                  <ul className="ml-8">
+                  <ul>
                     <li>
                       <b>SSPL</b>
                       <span>
@@ -284,7 +293,7 @@ function Disclaimer() {
               </ul>
               <ul>
                 <li>
-                  <ul className="ml-8">
+                  <ul>
                     <li>
                       <span>
                         In general, you can browse the Website without telling{" "}
@@ -311,14 +320,17 @@ function Disclaimer() {
                   </ul>
                 </li>
               </ul>
-              <ul className="list-none my-4">
-                <li className="font-bold text-[#003662] text-xl">
-                  Privacy Policy
-                </li>
-              </ul>
+              <div className="my-6">
+                <h2 className="flex items-start md:items-center font-bold text-[#003662] text-xl md:text-2xl border-b border-gray-200 pb-2 mb-4">
+                  <span className="inline-flex items-center justify-center w-7 h-7 rounded-lg bg-blue-100 text-blue-700 mr-3 flex-shrink-0 mt-0.5 md:mt-0 shadow-sm">
+                    <FaChevronRight className="text-xs md:text-sm" />
+                  </span>
+                  <span>Privacy Policy</span>
+                </h2>
+              </div>
               <ul>
                 <li>
-                  <ul className="ml-8">
+                  <ul>
                     <li>
                       <b>SSPL</b>
                       <span>
@@ -333,7 +345,7 @@ function Disclaimer() {
               </ul>
               <ul>
                 <li>
-                  <ul className="ml-8">
+                  <ul>
                     <li>
                       <span>
                         By visiting this Website you agree to be bound by the
@@ -344,7 +356,7 @@ function Disclaimer() {
                   </ul>
                 </li>
               </ul>
-              <ul className="ml-8">
+              <ul>
                 <li>
                   <ul>
                     <li>
@@ -357,14 +369,17 @@ function Disclaimer() {
                   </ul>
                 </li>
               </ul>
-              <ul className="list-none my-4">
-                <li className="font-bold text-[#003662] text-xl">
-                  Cookies
-                </li>
-              </ul>
+              <div className="my-6">
+                <h2 className="flex items-start md:items-center font-bold text-[#003662] text-xl md:text-2xl border-b border-gray-200 pb-2 mb-4">
+                  <span className="inline-flex items-center justify-center w-7 h-7 rounded-lg bg-blue-100 text-blue-700 mr-3 flex-shrink-0 mt-0.5 md:mt-0 shadow-sm">
+                    <FaChevronRight className="text-xs md:text-sm" />
+                  </span>
+                  <span>Cookies</span>
+                </h2>
+              </div>
               <ul>
                 <li>
-                  <ul className="ml-8">
+                  <ul>
                     <li>
                       <span>
                         A “cookie” is a small piece of information stored by a
@@ -384,7 +399,7 @@ function Disclaimer() {
                   </ul>
                 </li>
               </ul>
-              <ul className="ml-8">
+              <ul>
                 <li>
                   <ul>
                     <li>
@@ -408,7 +423,7 @@ function Disclaimer() {
                   </ul>
                 </li>
               </ul>
-              <ul className="ml-8">
+              <ul>
                 <li>
                   <ul>
                     <li>
@@ -475,12 +490,17 @@ function Disclaimer() {
                   </span>
                 </li>
               </ul>
+              <div className="my-6">
+                <h2 className="flex items-start md:items-center font-bold text-[#003662] text-xl md:text-2xl border-b border-gray-200 pb-2 mb-4">
+                  <span className="inline-flex items-center justify-center w-7 h-7 rounded-lg bg-blue-100 text-blue-700 mr-3 flex-shrink-0 mt-0.5 md:mt-0 shadow-sm">
+                    <FaChevronRight className="text-xs md:text-sm" />
+                  </span>
+                  <span>Your Consent</span>
+                </h2>
+              </div>
               <ul>
-                <li className="list-none font-bold text-[#003662] text-xl my-4">
-                  <b>Your Consent</b>
-                </li>
                 <li>
-                  <ul className="ml-8">
+                  <ul>
                     <li>
                       <span>
                         By using the Website and/ or by providing your
@@ -496,7 +516,7 @@ function Disclaimer() {
               </ul>
               <ul>
                 <li>
-                  <ul className="ml-8">
+                  <ul>
                     <li>
                       <span>If </span>
                       <b>SSPL</b>
@@ -517,12 +537,15 @@ function Disclaimer() {
                   </ul>
                 </li>
               </ul>
+              <div className="my-6">
+                <h2 className="flex items-start md:items-center font-bold text-[#003662] text-xl md:text-2xl border-b border-gray-200 pb-2 mb-4">
+                  <span className="inline-flex items-center justify-center w-7 h-7 rounded-lg bg-blue-100 text-blue-700 mr-3 flex-shrink-0 mt-0.5 md:mt-0 shadow-sm">
+                    <FaChevronRight className="text-xs md:text-sm" />
+                  </span>
+                  <span>Applicable Law and Jurisdiction</span>
+                </h2>
+              </div>
               <ul>
-                <li className="list-none font-bold text-[#003662] text-xl my-4">
-                  <b>Applicable Law and Jurisdiction</b>
-                </li>
-              </ul>
-              <ul className="ml-8">
                 <li>
                   <ul>
                     <li>

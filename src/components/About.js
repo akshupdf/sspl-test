@@ -92,7 +92,7 @@ function About() {
             <h1 className="text-xl font-bold text-center">
               Mr. Pulkit Sekhsaria
             </h1>
-            <p className="text-gray-700 text-base md:text-lg leading-relaxed text-justify">
+            <p className="text-gray-700 text-sm md:text-base leading-relaxed text-justify tracking-tight [word-spacing:-0.03em] [hyphens:auto]">
               Pulkit Sekhsaria is the Managing Director of Satyanarayan
               Sekhsaria Pvt. Ltd. (SSPL). Pulkit has been actively involved in
               investments and wealth management across various fields. Under his
@@ -113,7 +113,7 @@ function About() {
               {" "}
               Mr. Rajaram Prabhu
             </h1>
-            <p className="text-gray-700 text-base md:text-lg leading-relaxed text-justify">
+            <p className="text-gray-700 text-sm md:text-base leading-relaxed text-justify tracking-tight [word-spacing:-0.03em] [hyphens:auto]">
               Mr. Rajaram Prabhu is a Director at SSPL. With over 4 decades of
               experience in the commodity trading sector, he brings deep market
               insight and strategic expertise. His leadership is defined by a
@@ -135,7 +135,7 @@ function About() {
             <h1 className="text-xl font-bold text-center">
               Mr. Ankush Pitale{" "}
             </h1>
-            <p className="text-gray-700 text-base md:text-lg leading-relaxed text-justify">
+            <p className="text-gray-700 text-sm md:text-base leading-relaxed text-justify tracking-tight [word-spacing:-0.03em] [hyphens:auto]">
               Mr. Ankush Pitale is a Director at SSPL. Prior to joining SSPL, he
               worked for over 25 years in investment banking with leading
               financial institutions, including JM Financial, JP Morgan,
@@ -158,7 +158,7 @@ function About() {
             <h1 className="text-xl font-bold text-center">
               Mr. Lakshit Desai{" "}
             </h1>
-            <p className="text-gray-700 text-base md:text-lg leading-relaxed text-justify">
+            <p className="text-gray-700 text-sm md:text-base leading-relaxed text-justify tracking-tight [word-spacing:-0.03em] [hyphens:auto]">
               Mr. Lakshit Desai serves as a Director at SSPL, bringing over 27
               years of experience in taxation, audit, accounting, and finance. A
               Chartered Accountant with bachelor’s degrees in commerce and law,
