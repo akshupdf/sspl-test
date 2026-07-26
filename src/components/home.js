@@ -137,7 +137,7 @@ function Home() {
               spaceBetween: 20,
             },
             1280: {
-              slidesPerView: 3,
+              slidesPerView: 4,
             },
           }}
           modules={[Pagination, Navigation, Autoplay]}

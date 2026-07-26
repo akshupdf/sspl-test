@@ -31,7 +31,7 @@ const timelineData = [
     description:
       "Incorporated in 1974, SSPL boasts a rich legacy backed by its founders' extensive experience spanning over seven decades in the raw-cotton supply business. This wealth of knowledge and expertise has been instrumental in establishing strong and enduring relationships with reputed textile mills. Over the years, SSPL has built a reputation for reliability and quality, consistently providing high-grade raw cotton to meet the stringent demands of the textile industry.",
     image: cement,
-    color: "#c62828",
+    color: "#808080",
   },
   {
     year: 1979,
@@ -152,23 +152,36 @@ const HistoryVariant6 = () => {
         className="relative w-full bg-white hidden md:block h-[350vh]"
       >
         {/* Sticky viewport wrapper */}
-        <div className="sticky top-20 h-[calc(100vh-5rem)] w-full overflow-hidden flex flex-col justify-center">
+        <div className="sticky top-16 h-[calc(100vh-4rem)] w-full overflow-hidden flex flex-col justify-center">
           <div
             ref={trackRef}
-            className="relative flex flex-row items-center gap-0 py-20 min-w-[3000px] px-32 transition-transform duration-100 ease-out will-change-transform"
+            className="relative flex flex-row items-center gap-0 py-16 min-w-[2750px] px-32 transition-transform duration-100 ease-out will-change-transform"
             style={{
               transform: `translateX(-${scrollProgress * maxTranslate}px)`,
             }}
           >
             {/* Main Horizontal Line */}
             <div
-              className="absolute left-0 right-0 z-10"
+              className="absolute left-0 z-10 flex items-center"
               style={{
                 top: "50%",
                 transform: "translateY(-50%)",
+                width: "2530px",
               }}
             >
-              <div className="h-[3px] w-full bg-gray-300" />
+              <div className="h-[3px] flex-1 bg-gray-300" />
+              {/* Arrow head at the end after 2024 */}
+              <svg
+                className="w-6 h-6 text-gray-400 flex-shrink-0 -ml-2"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path d="M5 12h14m-6-6l6 6-6 6" />
+              </svg>
             </div>
             {timelineData.map((item, index) => {
               const top = index % 2 === 0;
@@ -181,21 +194,21 @@ const HistoryVariant6 = () => {
               return (
                 <div
                   key={item.year}
-                  className="relative flex-shrink-0 flex flex-col items-center w-[340px] h-[620px] overflow-visible z-20 transition-all duration-300 ease-out"
+                  className="relative flex-shrink-0 flex flex-col items-center w-[340px] h-[640px] overflow-visible z-20 transition-all duration-300 ease-out"
                   style={{
                     transform: `scale(${scale})`,
                   }}
                 >
                   {/* TOP SECTION */}
-                  <div className="w-full h-[310px] flex flex-col justify-end items-center pb-6">
+                  <div className="w-full h-[370px] flex flex-col justify-end items-center pb-4">
                     {top ? (
                       <div className="flex flex-col items-center overflow-visible">
                         <div
-                          className="w-[540px] h-[260px] bg-white border border-gray-150 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 flex flex-row overflow-hidden flex-shrink-0"
+                          className="w-[560px] h-[280px] bg-white border border-gray-150 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 flex flex-row overflow-hidden flex-shrink-0"
                           data-aos="fade-down"
                         >
                           {/* Left Side: Image container using object-contain to prevent cropping */}
-                          <div className="w-[180px] bg-gray-50 flex items-center justify-center p-3 flex-shrink-0 border-r border-gray-100">
+                          <div className="w-[170px] bg-gray-50 flex items-center justify-center p-3 flex-shrink-0 border-r border-gray-100">
                             <div className="w-full h-full bg-white rounded-xl overflow-hidden p-1 flex items-center justify-center shadow-inner">
                               <img
                                 src={item.image}
@@ -206,23 +219,21 @@ const HistoryVariant6 = () => {
                           </div>
 
                           {/* Right Side: Text content */}
-                          <div className="p-4 flex-1 flex flex-col overflow-y-auto text-left">
-                            <div className="space-y-1.5 flex-1 flex flex-col min-h-0">
-                              <h4
-                                className="text-sm font-bold font-serif uppercase tracking-wider mb-1.5"
-                                style={{ color: item.color }}
-                              >
-                                {item.title}
-                              </h4>
-                              <p className="text-sm text-gray-500 leading-relaxed text-justify   pr-1 flex-1 min-h-0">
-                                {item.description}
-                              </p>
-                            </div>
+                          <div className="p-4 flex-1 flex flex-col text-left overflow-hidden">
+                            <h4
+                              className="text-lg font-bold font-serif uppercase tracking-wider mb-2 flex-shrink-0"
+                              style={{ color: item.color }}
+                            >
+                              {item.title}
+                            </h4>
+                            <p className="text-[14px] text-gray-500 leading-relaxed text-justify pr-1 flex-1 overflow-hidden">
+                              {item.description}
+                            </p>
                           </div>
                         </div>
                         {/* Connector line */}
                         <div
-                          className="w-[2px] h-10 mt-4"
+                          className="w-[2px] h-7 mt-3"
                           style={{ background: item.color }}
                         ></div>
                       </div>
@@ -244,20 +255,20 @@ const HistoryVariant6 = () => {
                   />
 
                   {/* BOTTOM SECTION */}
-                  <div className="w-full h-[310px] flex flex-col justify-start items-center pt-6">
+                  <div className="w-full h-[340px] flex flex-col justify-start items-center pt-4">
                     {!top ? (
                       <div className="flex flex-col items-center overflow-visible">
                         {/* Connector line */}
                         <div
-                          className="w-[2px] h-10 mb-4"
+                          className="w-[2px] h-7 mb-3"
                           style={{ background: item.color }}
                         ></div>
                         <div
-                          className="w-[540px] h-[260px] bg-white border border-gray-150 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 flex flex-row overflow-hidden flex-shrink-0"
+                          className="w-[560px] h-[310px] bg-white border border-gray-150 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 flex flex-row overflow-hidden flex-shrink-0"
                           data-aos="fade-up"
                         >
                           {/* Left Side: Image container using object-contain to prevent cropping */}
-                          <div className="w-[180px] bg-gray-50 flex items-center justify-center p-3 flex-shrink-0 border-r border-gray-100">
+                          <div className="w-[170px] bg-gray-50 flex items-center justify-center p-3 flex-shrink-0 border-r border-gray-100">
                             <div className="w-full h-full bg-white rounded-xl overflow-hidden p-1 flex items-center justify-center shadow-inner">
                               <img
                                 src={item.image}
@@ -268,18 +279,16 @@ const HistoryVariant6 = () => {
                           </div>
 
                           {/* Right Side: Text content */}
-                          <div className="p-4 flex-1 flex flex-col overflow-y-auto text-left">
-                            <div className="space-y-1.8 flex-1 flex flex-col min-h-0">
-                              <h4
-                                className="text-sm font-bold font-serif uppercase tracking-wider "
-                                style={{ color: item.color }}
-                              >
-                                {item.title}
-                              </h4>
-                              <p className="text-sm text-gray-500  text-justify   pr-1 flex-1 min-h-0">
-                                {item.description}
-                              </p>
-                            </div>
+                          <div className="p-4 flex-1 flex flex-col text-left overflow-hidden">
+                            <h4
+                              className="text-lg font-bold font-serif uppercase tracking-wider mb-2 flex-shrink-0"
+                              style={{ color: item.color }}
+                            >
+                              {item.title}
+                            </h4>
+                            <p className="text-[14px] text-gray-500 leading-relaxed text-justify pr-1 flex-1 overflow-hidden">
+                              {item.description}
+                            </p>
                           </div>
                         </div>
                       </div>
@@ -306,11 +315,11 @@ const HistoryVariant6 = () => {
           {timelineData.map((item) => (
             <div
               key={item.year}
-              className="bg-white border border-gray-200 rounded-2xl shadow-lg overflow-hidden h-[340px] flex flex-col"
+              className="bg-white border border-gray-200 rounded-2xl shadow-lg overflow-hidden min-h-[380px] flex flex-col"
               data-aos="fade-up"
             >
               {/* Image */}
-              <div className="h-[140px] bg-gray-50 flex items-center justify-center p-3 flex-shrink-0">
+              <div className="h-[150px] bg-gray-50 flex items-center justify-center p-3 flex-shrink-0">
                 <div className="h-full w-full bg-white rounded-xl overflow-hidden p-2 flex items-center justify-center shadow-inner">
                   <img
                     src={item.image}
@@ -321,7 +330,7 @@ const HistoryVariant6 = () => {
               </div>
 
               {/* Content */}
-              <div className="p-4 flex-1 flex flex-col overflow-y-auto">
+              <div className="p-4 flex-1 flex flex-col">
                 <div className="flex items-center gap-3 mb-2 flex-shrink-0">
                   {/* Dot */}
                   <div
@@ -338,12 +347,12 @@ const HistoryVariant6 = () => {
                 </div>
 
                 <h4
-                  className="text-sm font-bold font-serif uppercase tracking-wider mb-1 flex-shrink-0"
+                  className="text-sm font-bold font-serif uppercase tracking-wider mb-2 flex-shrink-0"
                   style={{ color: item.color }}
                 >
                   {item.title}
                 </h4>
-                <p className="text-xs text-gray-600 leading-relaxed overflow-y-auto flex-1 pr-1 text-justify">
+                <p className="text-xs text-gray-600 leading-relaxed flex-1 pr-1 text-justify">
                   {item.description}
                 </p>
               </div>
