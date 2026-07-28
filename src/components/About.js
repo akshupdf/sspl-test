@@ -5,7 +5,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { ToTop } from "./ToTop";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import { Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -15,7 +15,7 @@ const managementData = [
     name: "Mr. Pulkit Sekhsaria",
     image: "/Mr. Pulkit Sekhsaria.jpg",
     description:
-      "Mr. Pulkit Sekhsaria is the Managing Director of Satyanarayan Sekhsaria Pvt. Ltd. (SSPL). Pulkit has been actively involved in investments and wealth management across various fields. Under his astute leadership and dynamic vision SSPL has grown by leaps and bounds and is today renowned as one of the leading and most reputed trading organizations dealing in agro-commodities.",
+      "Mr. Pulkit Sekhsaria, Managing Director of Satyanarayan Sekhsaria Pvt. Ltd. (SSPL). He was the whole time director on the board of Ambuja Cement till Jan 2006. He has more than 10 years of experience in handling Ports (Mumbai, Surat & Muldwarka) and handling bulk cement ships owned by the company. He has been actively involved in investments in the Family Office. He started exports of Castor Oil.",
   },
   {
     name: "Mr. Rajaram Prabhu",
@@ -60,7 +60,7 @@ function About() {
           <h1 className="text-4xl md:text-5xl font-bold text-[#003662] uppercase tracking-wide">
             About Us
           </h1>
-          <div className="h-1 w-20 bg-green-700 mx-auto mt-4 rounded"></div>
+          <div className="h-1 w-20 bg-[#003662] mx-auto mt-4 rounded"></div>
         </div>
 
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-center">
@@ -103,7 +103,7 @@ function About() {
           <h2 className="text-4xl md:text-5xl font-bold text-[#003662] uppercase tracking-wide">
             Milestone
           </h2>
-          <div className="h-1 w-20 bg-green-700 mx-auto mt-4 rounded"></div>
+          <div className="h-1 w-20 bg-[#003662] mx-auto mt-4 rounded"></div>
         </div>
         <div className="flex items-center justify-center">
           <HistorySelector />
@@ -117,7 +117,7 @@ function About() {
             <h1 className="text-4xl md:text-5xl font-bold text-[#003662] uppercase tracking-wide">
               Our Management
             </h1>
-            <div className="h-1 w-20 bg-green-700 mx-auto mt-4 rounded"></div>
+            <div className="h-1 w-20 bg-[#003662] mx-auto mt-4 rounded"></div>
           </div>
 
           {/* Custom Navigation Arrows positioned further left & right */}
@@ -161,10 +161,7 @@ function About() {
           <Swiper
             grabCursor
             loop={true}
-            autoplay={{
-              delay: 4000,
-              disableOnInteraction: false,
-            }}
+            autoplay={false}
             navigation={{
               prevEl: ".management-prev",
               nextEl: ".management-next",
@@ -189,7 +186,7 @@ function About() {
                 spaceBetween: 28,
               },
             }}
-            modules={[Pagination, Navigation, Autoplay]}
+            modules={[Pagination, Navigation]}
             className="w-full py-6 mx-auto management-swiper"
           >
             {managementData.map((member, idx) => (
@@ -206,7 +203,7 @@ function About() {
                     {member.name}
                   </h3>
                   <div className="w-12 h-1 bg-[#003662]/60 mb-4 rounded-full flex-shrink-0"></div>
-                  <p className="text-gray-700 text-sm md:text-base leading-relaxed text-justify overflow-hidden flex-1 w-full">
+                  <p className="text-gray-700 text-sm md:text-base leading-relaxed text-left overflow-hidden flex-1 w-full">
                     {member.description}
                   </p>
                 </div>

@@ -72,51 +72,48 @@ const products = [
 function Product() {
   return (
     <div className="min-h-screen bg-gray-50 pt-28 lg:pt-32 pb-16">
-      <div className="max-w-7xl mx-auto px-4 md:px-8">
-        <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold text-[#003662] uppercase tracking-wide">
+      <div className="w-full max-w-[1920px] mx-auto px-4 md:px-10 lg:px-16">
+        <div className="text-center mb-8">
+          <h1 className="text-3xl md:text-4xl font-bold text-[#003662] uppercase tracking-wide">
             Products
           </h1>
-          <div className="h-1 w-20 bg-green-700 mx-auto mt-4 rounded"></div>
+          <div className="h-1 w-16 bg-green-700 mx-auto mt-3 rounded"></div>
         </div>
 
-        <div className="space-y-8">
-          {products.map((product, index) => (
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+          {products.map((product) => (
             <div
               key={product.title}
-              className="flex flex-col lg:flex-row bg-white rounded-2xl shadow-md  transition-all duration-300 border border-gray-100 overflow-hidden"
+              className="bg-white rounded-2xl border border-gray-200 shadow-sm hover:shadow-xl transition-all duration-300 p-6 flex flex-col items-center group text-center hover:-translate-y-1 w-full"
             >
               {/* Image Section */}
-              <div className="w-full lg:w-[380px] xl:w-[450px] p-6 flex items-center justify-center ">
-                <div className="w-full h-[280px] md:h-[320px] bg-white rounded-xl flex items-center justify-center p-4">
-                  <img
-                    src={product.image}
-                    alt={product.title}
-                    className="max-w-full max-h-full object-contain p-2"
-                  />
-                </div>
+              <div className="w-full h-48 sm:h-52  rounded-xl flex items-center justify-center p-4 mb-4 group-hover:scale-105 transition-transform duration-300">
+                <img
+                  src={product.image}
+                  alt={product.title}
+                  className="max-w-full max-h-full object-contain"
+                />
               </div>
 
-              {/* Content Section */}
-              <div className="flex-1 p-6 lg:p-10 flex flex-col justify-center">
-                <h2 className="text-2xl lg:text-3xl font-bold font-serif text-[#003662] mb-4">
-                  {product.title}
-                </h2>
+              {/* Title & Divider */}
+              <h2 className="text-xl font-bold font-serif text-[#003662] mb-2 min-h-[32px] flex items-center justify-center">
+                {product.title}
+              </h2>
+              <div className="w-12 h-0.5 bg-green-700 mb-3.5 rounded-full"></div>
 
-                <p className="text-gray-600 text-base lg:text-lg leading-relaxed mb-6 text-justify">
-                  {product.description}
-                </p>
+              {/* Description */}
+              <p className="text-gray-600 text-sm md:text-base leading-relaxed mb-5 text-left flex-1 w-full">
+                {product.description}
+              </p>
 
-                <div>
-                  <Link
-                    to={product.link}
-                    target="_blank"
-                    className="inline-flex items-center justify-center px-6 py-3 bg-green-700 hover:bg-green-800 text-white font-semibold rounded-lg shadow-md transition-colors duration-300"
-                  >
-                    Get In Touch
-                  </Link>
-                </div>
-              </div>
+              {/* Button */}
+              <Link
+                to={product.link}
+                target="_blank"
+                className="w-full mt-auto py-2.5 px-4 bg-green-700 hover:bg-green-800 text-white font-semibold text-sm rounded-lg shadow transition-colors duration-300 text-center"
+              >
+                Get In Touch
+              </Link>
             </div>
           ))}
         </div>

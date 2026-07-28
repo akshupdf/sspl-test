@@ -62,7 +62,7 @@ function Navbar() {
                 onClick={() => setIsOpen(false)}
                 className="hover:text-blue-200 transition-colors duration-300 block py-2 lg:py-6"
               >
-                About
+                About Us
               </Link>
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-300 transition-all duration-300 group-hover:w-full hidden lg:block"></span>
             </li>

@@ -4,43 +4,6 @@ import { MdOutlineAttachEmail } from "react-icons/md";
 import { HiBuildingOffice } from "react-icons/hi2";
 import { FaClock } from "react-icons/fa";
 
-const countryCodes = [
-  { code: "+91", country: "India", pattern: /^\d{10}$/, example: "9876543210" },
-  {
-    code: "+1",
-    country: "USA/Canada",
-    pattern: /^\d{10}$/,
-    example: "1234567890",
-  },
-  { code: "+44", country: "UK", pattern: /^\d{10}$/, example: "7123456789" },
-  {
-    code: "+61",
-    country: "Australia",
-    pattern: /^\d{10}$/,
-    example: "4123456789",
-  },
-  { code: "+86", country: "China", pattern: /^\d{10}$/, example: "1381234567" },
-  {
-    code: "+49",
-    country: "Germany",
-    pattern: /^\d{10}$/,
-    example: "1512345678",
-  },
-  {
-    code: "+33",
-    country: "France",
-    pattern: /^\d{10}$/,
-    example: "6123456789",
-  },
-  { code: "+81", country: "Japan", pattern: /^\d{10}$/, example: "9012345678" },
-  { code: "+971", country: "UAE", pattern: /^\d{10}$/, example: "5012345678" },
-  {
-    code: "+65",
-    country: "Singapore",
-    pattern: /^\d{10}$/,
-    example: "9123456789",
-  },
-];
 
 const products = [
   "Castor Seed",
@@ -343,18 +306,15 @@ function Contact() {
                 </label>
                 <div className="flex-1 w-full">
                   <div className="flex gap-2">
-                    <select
+                    <input
+                      type="text"
                       value={formData.countryCode}
                       onChange={handleChange}
+                      onBlur={handleBlur}
                       name="countryCode"
+                      placeholder="+91"
                       className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-2 focus:ring-[#003662] focus:border-[#003662] block w-[110px] p-2.5 outline-none"
-                    >
-                      {countryCodes.map((country) => (
-                        <option key={country.code} value={country.code}>
-                          {country.code}
-                        </option>
-                      ))}
-                    </select>
+                    />
                     <input
                       value={formData.contactNumber}
                       onChange={handleChange}

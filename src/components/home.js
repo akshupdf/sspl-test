@@ -194,7 +194,9 @@ function Home() {
           ].map((item, index) => (
             <div
               key={index}
-              className="bg-white border border-gray-200 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 p-5 flex items-center justify-center w-36 h-28 sm:w-44 sm:h-32 md:w-52 md:h-36 hover:-translate-y-1"
+              className={`bg-white border border-gray-200 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300  flex items-center justify-center w-36 h-28 sm:w-44 sm:h-32 md:w-52 md:h-36 hover:-translate-y-1 ${
+                index === 0 || index === 4 ? "p-0" : "p-5"
+              }`}
             >
               <img
                 src={item.src}

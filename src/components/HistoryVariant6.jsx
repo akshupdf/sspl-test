@@ -175,7 +175,7 @@ const HistoryVariant6 = () => {
                 className="w-6 h-6 text-gray-400 flex-shrink-0 -ml-2"
                 viewBox="0 0 24 24"
                 fill="none"
-                stroke="currentColor"
+                stroke="#003662"
                 strokeWidth="2.5"
                 strokeLinecap="round"
                 strokeLinejoin="round"
@@ -227,11 +227,7 @@ const HistoryVariant6 = () => {
                               {item.title}
                             </h4>
                             <p
-                              className={`text-[14px] ${
-                                item.title === "Raw Cotton Trading & Export"
-                                  ? "text-black"
-                                  : "text-gray-500"
-                              } leading-relaxed text-justify pr-1 flex-1 overflow-hidden`}
+                              className={`text-[14px] text-black leading-relaxed text-justify pr-1 flex-1 overflow-hidden`}
                             >
                               {item.description}
                             </p>
@@ -293,11 +289,7 @@ const HistoryVariant6 = () => {
                               {item.title}
                             </h4>
                             <p
-                              className={`text-[14px] ${
-                                item.title === "Raw Cotton Trading & Export"
-                                  ? "text-black"
-                                  : "text-gray-500"
-                              } leading-relaxed text-justify pr-1 flex-1 overflow-hidden`}
+                              className={`text-[14px] text-black leading-relaxed text-justify pr-1 flex-1 overflow-hidden`}
                             >
                               {item.description}
                             </p>
