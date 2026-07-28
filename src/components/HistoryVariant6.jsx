@@ -352,7 +352,7 @@ const HistoryVariant6 = () => {
                 >
                   {item.title}
                 </h4>
-                <p className="text-xs text-gray-600 leading-relaxed flex-1 pr-1 text-justify">
+                <p className="text-xs text-black leading-relaxed flex-1 pr-1 text-justify">
                   {item.description}
                 </p>
               </div>
