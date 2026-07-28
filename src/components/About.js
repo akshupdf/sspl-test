@@ -37,7 +37,7 @@ const managementData = [
   },
   {
     name: "Mr. Ashok Sharma",
-    image: "/Ashok Sharma.png",
+    image: "/ashok sharma.png",
     description:
       "Mr. Ashok Sharma is a Commerce graduate (B.Com) from the University of Rajasthan and currently serves as the Finance Controller at SSPL. He brings over 31 years of extensive experience in Accounts, Finance, and Financial Management,. In addition to his financial expertise, Mr. Sharma possesses deep insight into rural India and the agricultural sector, gained through years of working closely with agrarian communities and rural markets.",
   },
