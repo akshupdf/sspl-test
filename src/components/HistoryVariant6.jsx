@@ -226,7 +226,13 @@ const HistoryVariant6 = () => {
                             >
                               {item.title}
                             </h4>
-                            <p className="text-[14px] text-gray-500 leading-relaxed text-justify pr-1 flex-1 overflow-hidden">
+                            <p
+                              className={`text-[14px] ${
+                                item.title === "Raw Cotton Trading & Export"
+                                  ? "text-black"
+                                  : "text-gray-500"
+                              } leading-relaxed text-justify pr-1 flex-1 overflow-hidden`}
+                            >
                               {item.description}
                             </p>
                           </div>
@@ -286,7 +292,13 @@ const HistoryVariant6 = () => {
                             >
                               {item.title}
                             </h4>
-                            <p className="text-[14px] text-gray-500 leading-relaxed text-justify pr-1 flex-1 overflow-hidden">
+                            <p
+                              className={`text-[14px] ${
+                                item.title === "Raw Cotton Trading & Export"
+                                  ? "text-black"
+                                  : "text-gray-500"
+                              } leading-relaxed text-justify pr-1 flex-1 overflow-hidden`}
+                            >
                               {item.description}
                             </p>
                           </div>
