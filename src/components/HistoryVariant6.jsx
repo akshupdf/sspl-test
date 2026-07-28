@@ -31,7 +31,7 @@ const timelineData = [
     description:
       "Incorporated in 1974, SSPL boasts a rich legacy backed by its founders' extensive experience spanning over seven decades in the raw-cotton supply business. This wealth of knowledge and expertise has been instrumental in establishing strong and enduring relationships with reputed textile mills. Over the years, SSPL has built a reputation for reliability and quality, consistently providing high-grade raw cotton to meet the stringent demands of the textile industry.",
     image: cement,
-    color: "#808080",
+    color: "#c62828",
   },
   {
     year: 1979,

@@ -184,32 +184,25 @@ function Home() {
           </h2>
           <div className="h-1 w-20 bg-[#003662] mx-auto mt-4 rounded"></div>
         </div>
-        <div className="flex flex-wrap items-center justify-center gap-8 max-w-7xl mx-auto pt-8 px-6">
-          <img
-            src={f}
-            alt="Membership Logo 1"
-            className="h-16 sm:h-20 md:h-24 lg:h-28 w-auto object-contain transition-all duration-300 hover:scale-105"
-          />
-          <img
-            src={g}
-            alt="Membership Logo 2"
-            className="h-16 sm:h-20 md:h-24 lg:h-28 w-auto object-contain transition-all duration-300 hover:scale-105"
-          />
-          <img
-            src={wcsf}
-            alt="Membership Logo 3"
-            className="h-16 sm:h-20 md:h-24 lg:h-28 w-auto object-contain p-3 transition-all duration-300 hover:scale-105"
-          />
-          <img
-            src={i}
-            alt="Membership Logo 4"
-            className="h-16 sm:h-20 md:h-24 lg:h-28 w-auto object-contain p-3 transition-all duration-300 hover:scale-105"
-          />
-          <img
-            src={h}
-            alt="Membership Logo 5"
-            className="h-16 sm:h-20 md:h-24 lg:h-28 w-auto object-contain transition-all duration-300 hover:scale-105"
-          />
+        <div className="flex flex-wrap items-center justify-center gap-6 md:gap-8 max-w-7xl mx-auto pt-6 px-6">
+          {[
+            { src: f, alt: "Membership Logo 1" },
+            { src: g, alt: "Membership Logo 2" },
+            { src: wcsf, alt: "Membership Logo 3" },
+            { src: i, alt: "Membership Logo 4" },
+            { src: h, alt: "Membership Logo 5" },
+          ].map((item, index) => (
+            <div
+              key={index}
+              className="bg-white border border-gray-200 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 p-5 flex items-center justify-center w-36 h-28 sm:w-44 sm:h-32 md:w-52 md:h-36 hover:-translate-y-1"
+            >
+              <img
+                src={item.src}
+                alt={item.alt}
+                className="max-h-full max-w-full object-contain transition-transform duration-300 hover:scale-105"
+              />
+            </div>
+          ))}
         </div>
       </div>
 
