@@ -4,7 +4,6 @@ import { MdOutlineAttachEmail } from "react-icons/md";
 import { HiBuildingOffice } from "react-icons/hi2";
 import { FaClock } from "react-icons/fa";
 
-
 const products = [
   "Castor Seed",
   "Castor Oil",
@@ -24,7 +23,7 @@ function Contact() {
     fullName: "",
     email: "",
     organization: "",
-    countryCode: "+91",
+    countryCode: "",
     contactNumber: "",
     product: "",
     purposeOfEnquiry: "",
@@ -46,9 +45,9 @@ function Contact() {
     return emailRegex.test(email);
   };
 
-  // Enforces 10 digits only for phone numbers
+  // Enforces digits only for phone numbers
   const validatePhoneNumber = (number) => {
-    return /^\d{10}$/.test(number);
+    return /^\d+$/.test(number);
   };
 
   // Validate a single field based on name and value
@@ -81,8 +80,7 @@ function Contact() {
       if (!value.trim()) {
         errorMsg = "Contact Number is required";
       } else if (!validatePhoneNumber(value.trim())) {
-        errorMsg =
-          "Contact Number must contain exactly 10 digits (numbers only)";
+        errorMsg = "Contact Number must contain digits only";
       }
     }
 
@@ -108,19 +106,24 @@ function Contact() {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
+    let newValue = value;
+    if (name === "contactNumber") {
+      newValue = value.replace(/\D/g, "");
+    }
+
     setFormData((prevData) => {
       const updated = {
         ...prevData,
-        [name]: value,
+        [name]: newValue,
       };
 
       // Perform real-time validation on change for dropdowns or when criteria is met
       if (name === "product") {
-        validateField("product", value);
+        validateField("product", newValue);
       }
       if (name === "contactNumber") {
-        if (value.trim().length === 10) {
-          validateField("contactNumber", value);
+        if (newValue.trim()) {
+          validateField("contactNumber", newValue);
         } else {
           setErrors((prev) => ({ ...prev, contactNumber: "" }));
         }
@@ -312,7 +315,7 @@ function Contact() {
                       onChange={handleChange}
                       onBlur={handleBlur}
                       name="countryCode"
-                      placeholder="+91"
+                      placeholder="Country Code"
                       className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-2 focus:ring-[#003662] focus:border-[#003662] block w-[110px] p-2.5 outline-none"
                     />
                     <input
@@ -320,13 +323,14 @@ function Contact() {
                       onChange={handleChange}
                       onBlur={handleBlur}
                       name="contactNumber"
-                      type="tel"
+                      type="text"
+                      inputMode="numeric"
                       className={`flex-1 bg-gray-50 border ${
                         errors.contactNumber
                           ? "border-red-500"
                           : "border-gray-300"
                       } text-gray-900 text-sm rounded-lg focus:ring-2 focus:ring-[#003662] focus:border-[#003662] block p-2.5 outline-none`}
-                      placeholder="Enter exactly 10 digits"
+                      placeholder="Enter only digits"
                     />
                   </div>
                   {errors.contactNumber && (
@@ -334,9 +338,6 @@ function Contact() {
                       {errors.contactNumber}
                     </p>
                   )}
-                  <p className="text-gray-500 text-xs mt-1">
-                    Enforce strictly 10 digits only.
-                  </p>
                 </div>
               </div>
 

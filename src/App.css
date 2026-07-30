@@ -7,6 +7,10 @@
   font-family: "Times New Roman", Times, serif !important;
 }
 
+p {
+  text-align: justify;
+}
+
 .reviews-swiper .swiper-slide {
   height: auto;
   display: flex;

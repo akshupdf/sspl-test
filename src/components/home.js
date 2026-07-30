@@ -146,7 +146,7 @@ function Home() {
           {products.map((product) => (
             <SwiperSlide key={product.name} className="py-2">
               <Link to="/products" className="block group">
-                <div className="bg-white rounded-2xl border border-gray-100 hover:border-gray-200/80 shadow-sm hover:shadow-xl transition-all duration-500 p-5 h-[390px] flex flex-col cursor-pointer">
+                <div className="bg-white rounded-2xl border border-gray-100 hover:border-gray-200/80 shadow-md hover:shadow-xl transition-all duration-500 p-5 h-[390px] flex flex-col cursor-pointer">
                   <div className="h-[230px] w-full bg-gray-50/40 rounded-xl flex items-center justify-center p-6 transition-all duration-500 group-hover:bg-gray-100/30 relative overflow-hidden">
                     <img
                       src={product.image}
