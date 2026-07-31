@@ -226,10 +226,10 @@ function Contact() {
         <div className="h-1 w-20 bg-green-700 mx-auto mt-4 rounded"></div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 md:px-8 w-full flex flex-col lg:flex-row gap-12 items-start">
+      <div className="max-w-7xl mb-8 mx-auto px-4 md:px-8 w-full flex flex-col lg:flex-row gap-12 items-stretch">
         {/* Form Column */}
         <div className="w-full lg:w-1/2 flex justify-center">
-          <div className="w-full max-w-xl bg-white border border-gray-100 rounded-2xl p-6 md:p-10 shadow-lg">
+          <div className="w-full max-w-xl bg-white border border-gray-100 rounded-2xl p-6 md:p-10 shadow-lg flex flex-col justify-between">
             <form className="space-y-5" onSubmit={handleSubmit}>
               {/* Full Name */}
               <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
@@ -412,8 +412,8 @@ function Contact() {
         </div>
 
         {/* Address and Map Column */}
-        <div className="w-full lg:w-1/2 space-y-6 text-gray-700 text-base md:text-lg">
-          <div className="bg-white border border-gray-100 rounded-2xl p-6 md:p-10 shadow-lg space-y-6">
+        <div className="w-full lg:w-1/2 text-gray-700 text-base md:text-lg flex flex-col">
+          <div className="bg-white border border-gray-100 rounded-2xl p-6 md:p-10 shadow-lg flex flex-col justify-between space-y-6 h-full">
             <div>
               <div className="flex items-center gap-2 mb-2 text-[#003662]">
                 <HiBuildingOffice className="text-2xl" />
@@ -456,12 +456,11 @@ function Contact() {
               </div>
             </div>
 
-            <div className="w-full mt-6 rounded-xl overflow-hidden shadow-md border border-gray-100">
+            <div className="w-full mt-6 rounded-xl overflow-hidden shadow-md border border-gray-100 flex-1 min-h-[220px]">
               <iframe
                 title="Office Location Map"
                 src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d483090.85185613966!2d72.823173!3d18.924874!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7d1e944dac3d7%3A0x61c1f7b11b32e334!2sMaker%20Chambers%203!5e0!3m2!1sen!2sus!4v1716837749064!5m2!1sen!2sus"
-                width="100%"
-                height="320"
+                className="w-full h-full min-h-[220px]"
                 style={{ border: 0 }}
                 allowFullScreen=""
                 loading="lazy"

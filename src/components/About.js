@@ -203,7 +203,7 @@ function About() {
                     {member.name}
                   </h3>
                   <div className="w-12 h-1 bg-[#003662]/60 mb-4 rounded-full flex-shrink-0"></div>
-                  <p className="text-gray-700 text-sm md:text-base leading-relaxed text-left overflow-hidden flex-1 w-full">
+                  <p className="text-gray-700 text-sm md:text-base leading-relaxed text-justify overflow-hidden flex-1 w-full">
                     {member.description}
                   </p>
                 </div>

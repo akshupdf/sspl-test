@@ -10,6 +10,11 @@ import pulses from "../images/pulses-prod.jpeg";
 import chickpeas from "../images/peas-prod.jpeg";
 import pigeonPeas from "../images/peagon-prod.png";
 
+const createWhatsAppLink = (productTitle, phone = "919833691511") => {
+  const message = `Hello SSPL,\nCan you provide the latest price and availability of ${productTitle.toLowerCase()}.`;
+  return `https://api.whatsapp.com/send?phone=${phone}&text=${encodeURIComponent(message)}`;
+};
+
 const products = [
   {
     title: "Castor Seed",
@@ -28,42 +33,42 @@ const products = [
   {
     title: "Guar Seeds",
     image: guarSeed,
-    link: "https://wa.link/z39v4j",
+    link: createWhatsAppLink("Guar Seeds", "919833691511"),
     description:
       "The guar or cluster bean is an annual legume also known as Cyamopsis Tetragonoloba and the source of guar gum. It is a valuable crop used in agriculture and crop rotation systems.",
   },
   {
     title: "Guar Gum",
     image: guarGum,
-    link: "https://wa.link/z39v4j",
+    link: createWhatsAppLink("Guar Gum", "919833691511"),
     description:
       "Guar gum is extracted from guar beans. It is used as an emulsifier, thickener, and stabilizer across food, cosmetics, and pharmaceutical industries due to its exceptional thickening properties.",
   },
   {
     title: "Cashew Kernels",
     image: cashew,
-    link: "https://wa.link/z39v4j",
+    link: createWhatsAppLink("Cashew Kernels", "919833691511"),
     description:
       "Cashew kernels are one of India's major agricultural exports. They are cultivated across several countries and are widely consumed worldwide due to their nutritional value and versatility.",
   },
   {
     title: "Pulses",
     image: pulses,
-    link: "https://wa.link/z39v4j",
+    link: createWhatsAppLink("Pulses", "919833691511"),
     description:
       "Pulses are edible seeds of legumes and are a vital source of protein worldwide. They are grown extensively for human consumption and also improve soil fertility.",
   },
   {
     title: "Chickpeas",
     image: chickpeas,
-    link: "https://wa.link/z39v4j",
+    link: createWhatsAppLink("Chickpeas", "919833691511"),
     description:
       "Chickpeas are an annual legume widely known as gram or garbanzo beans. They are rich in protein and are consumed extensively throughout Asia, Europe, and the Americas.",
   },
   {
     title: "Pigeon Peas",
     image: pigeonPeas,
-    link: "https://wa.link/z39v4j",
+    link: createWhatsAppLink("Pigeon Peas", "919833691511"),
     description:
       "Pigeon peas are perennial legumes cultivated in tropical and subtropical regions. They are an important food crop in South Asia, Africa, and Latin America.",
   },
@@ -107,13 +112,14 @@ function Product() {
               </p>
 
               {/* Button */}
-              <Link
-                to={product.link}
+              <a
+                href={product.link}
                 target="_blank"
-                className="w-full mt-auto py-2.5 px-4 bg-green-700 hover:bg-green-800 text-white font-semibold text-sm rounded-lg shadow transition-colors duration-300 text-center"
+                rel="noopener noreferrer"
+                className="w-full mt-auto py-2.5 px-4 bg-green-700 hover:bg-green-800 text-white font-semibold text-sm rounded-lg shadow transition-colors duration-300 text-center block"
               >
                 Get In Touch
-              </Link>
+              </a>
             </div>
           ))}
         </div>
