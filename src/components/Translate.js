@@ -2,10 +2,10 @@ import React from "react";
 
 const Translate = () => {
   return (
-    <div className="flex justify-end w-full text-black fixed top-[4.5rem] lg:top-[5rem] right-2 p-4 z-20">
+    <div className="fixed top-[5.5rem] lg:top-[5rem] right-2 sm:right-4 z-30 flex justify-end">
       <select
         onChange={(e) => (window.location.href = e.target.value)}
-        className="border border-black p-2 rounded-lg cursor-pointer "
+        className="bg-white border border-black p-2 text-xs sm:text-sm rounded-lg cursor-pointer shadow-sm outline-none"
       >
         <option value="https://ssp--limited-com.translate.goog/?_x_tr_sl=fr&_x_tr_tl=en&_x_tr_hl=en-US&_x_tr_pto=wapp">
           English

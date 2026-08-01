@@ -307,16 +307,16 @@ function Contact() {
                 <label className="sm:w-1/3 text-left text-sm font-semibold text-gray-700 flex-shrink-0 pt-2.5">
                   Contact Number *
                 </label>
-                <div className="flex-1 w-full">
-                  <div className="flex gap-2">
+                <div className="flex-1 w-full min-w-0">
+                  <div className="flex gap-2 w-full min-w-0">
                     <input
                       type="text"
                       value={formData.countryCode}
                       onChange={handleChange}
                       onBlur={handleBlur}
                       name="countryCode"
-                      placeholder="Country Code"
-                      className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-2 focus:ring-[#003662] focus:border-[#003662] block w-[110px] p-2.5 outline-none"
+                      placeholder="Code"
+                      className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-2 focus:ring-[#003662] focus:border-[#003662] block w-20 sm:w-16 flex-shrink-0 min-w-0 p-2.5 text-center outline-none"
                     />
                     <input
                       value={formData.contactNumber}
@@ -325,7 +325,7 @@ function Contact() {
                       name="contactNumber"
                       type="text"
                       inputMode="numeric"
-                      className={`flex-1 bg-gray-50 border ${
+                      className={`min-w-0 flex-1 bg-gray-50 border ${
                         errors.contactNumber
                           ? "border-red-500"
                           : "border-gray-300"

@@ -75,23 +75,23 @@ function Home() {
     <div className="w-[100%] h-[100%] relative ">
       <Translate />
       <div
-        className="lg:w-[100%] font-bold h-screen lg:flex justify-center bg-cover bg-center bg-no-repeat relative"
+        className="w-full font-bold h-[65vh] sm:h-[75vh] lg:h-screen flex flex-col items-center bg-[size:100%_100%] lg:bg-cover bg-center bg-no-repeat relative pt-24 sm:pt-28 lg:pt-32 pb-16"
         style={{ backgroundImage: "url(/herobg.png)" }}
       >
         {/* Overlay for better text readability */}
         <div className="absolute inset-0 bg-white/20"></div>
         <div
-          className="relative z-10 max-w-6xl mx-auto px-4 mt-[8rem] text-center"
+          className="relative z-10 max-w-6xl mx-auto px-4 text-center"
           data-aos="fade-left"
           data-aos-duration="3000"
         >
-          <div className="mb-4">
-            <h1 className="lg:text-7xl sm:text-5xl xl:text-8xl  font-serif leading-tight text-[#003662] drop-shadow-sm">
+          <div className="mb-3">
+            <h1 className="lg:text-7xl text-5xl xl:text-8xl font-serif leading-tight text-[#003662] drop-shadow-sm text-center">
               SSPL
             </h1>
           </div>
 
-          <p className="text-lg sm:text-base lg:text-xl mb-[6rem] text-gray-800 leading-relaxed max-w-5xl mx-auto font-medium">
+          <p className="text-sm sm:text-base lg:text-xl mb-6 sm:mb-10 lg:mb-14 text-gray-800 leading-relaxed max-w-5xl mx-auto font-medium text-center">
             SSPL is focused on exporting and supplying of a wide range of
             agricultural commodities like Castor Seed, Guar Seed, Castor Oil
             (FSG Grade), Cashew Kernels, Pulses, Chickpeas and Pigeon Peas.
@@ -101,7 +101,7 @@ function Home() {
           <div className="flex flex-col sm:flex-row gap-8 justify-center items-center">
             <Link
               to="/about"
-              className="group inline-flex items-center justify-center px-10 py-5 text-lg font-bold text-white bg-[#003662] hover:bg-[#004882] rounded-xl shadow-xl transition-all duration-500 hover:shadow-2xl hover:scale-105"
+              className="group inline-flex items-center justify-center px-8 sm:px-10 py-3.5 sm:py-5 text-base sm:text-lg font-bold text-white bg-[#003662] hover:bg-[#004882] rounded-xl shadow-xl transition-all duration-500 hover:shadow-2xl hover:scale-105"
             >
               <span>Discover Our Story</span>
             </Link>

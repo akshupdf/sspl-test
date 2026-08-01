@@ -85,7 +85,7 @@ function Product() {
           <div className="h-1 w-16 bg-green-700 mx-auto mt-3 rounded"></div>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
           {products.map((product) => (
             <div
               key={product.title}
@@ -107,7 +107,7 @@ function Product() {
               <div className="w-12 h-0.5 bg-green-700 mb-3.5 rounded-full"></div>
 
               {/* Description */}
-              <p className="text-gray-600 text-sm md:text-base leading-relaxed mb-5 text-left flex-1 w-full">
+              <p className="text-gray-600 text-sm md:text-base leading-relaxed mb-5 text-justify flex-1 w-full">
                 {product.description}
               </p>
 

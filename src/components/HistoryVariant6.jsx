@@ -76,7 +76,7 @@ const timelineData = [
   },
   {
     year: 2024,
-    title: "SSPL Celebrated 50 Years of Golden Jubilee",
+    title: "SSPL Celebrated 50 Years of Golden Jubilee ",
     description:
       "Major Milestone: Satyanarayan Sekhsaria Private Limited (SSPL) proudly celebrated its Golden Jubilee on November 2024, marking exactly 50 years of since its operations.",
     image: milestone,
@@ -195,11 +195,9 @@ const HistoryVariant6 = () => {
             {timelineData.map((item, index) => {
               const top = index % 2 === 0;
               const distance = Math.abs(index - activeCardIndex);
-              const isGoldenJubilee = item.image === milestone;
 
               // Focus Zoom variables based on active card center location
               const scale = Math.max(0.82, 1 - distance * 0.08);
-              const opacity = Math.max(0.4, 1 - distance * 0.25);
 
               return (
                 <div
@@ -213,23 +211,6 @@ const HistoryVariant6 = () => {
                   <div className="w-full h-[370px] flex flex-col justify-end items-center pb-4">
                     {top ? (
                       <div className="flex flex-col items-center overflow-visible">
-                        {isGoldenJubilee ? (
-                          <div
-                            className="w-[560px] h-[280px] bg-white border border-gray-150 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 p-3 flex flex-col overflow-hidden flex-shrink-0"
-                            data-aos="fade-down"
-                          >
-                            <div className="w-full flex-1 rounded-xl overflow-hidden p-1 flex items-center justify-center border border-gray-100 bg-gray-50">
-                              <img
-                                src={item.image}
-                                alt="SSPL Golden Jubilee"
-                                className="w-full h-full object-contain"
-                              />
-                            </div>
-                            <p className="text-[12px] md:text-[13px] text-black leading-snug text-center mt-2 flex-shrink-0 font-medium px-1">
-                              {item.description}
-                            </p>
-                          </div>
-                        ) : (
                           <div
                             className="w-[560px] h-[280px] bg-white border border-gray-150 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 flex flex-row overflow-hidden flex-shrink-0"
                             data-aos="fade-down"
@@ -260,7 +241,6 @@ const HistoryVariant6 = () => {
                               </p>
                             </div>
                           </div>
-                        )}
                         {/* Connector line */}
                         <div
                           className="w-[2px] h-7 mt-3"
@@ -293,23 +273,6 @@ const HistoryVariant6 = () => {
                           className="w-[2px] h-7 mb-3"
                           style={{ background: item.color }}
                         ></div>
-                        {isGoldenJubilee ? (
-                          <div
-                            className="w-[560px] h-[310px] bg-white border border-gray-150 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 p-3 flex flex-col overflow-hidden flex-shrink-0"
-                            data-aos="fade-up"
-                          >
-                            <div className="w-full flex-1 rounded-xl overflow-hidden p-1 flex items-center justify-center border border-gray-100 bg-gray-50">
-                              <img
-                                src={item.image}
-                                alt="SSPL Golden Jubilee"
-                                className="w-full h-full object-contain"
-                              />
-                            </div>
-                            <p className="text-[12px] md:text-[13px] text-black leading-snug text-center mt-2 flex-shrink-0 font-medium px-1">
-                              {item.description}
-                            </p>
-                          </div>
-                        ) : (
                           <div
                             className="w-[560px] h-[310px] bg-white border border-gray-150 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 flex flex-row overflow-hidden flex-shrink-0"
                             data-aos="fade-up"
@@ -340,7 +303,6 @@ const HistoryVariant6 = () => {
                               </p>
                             </div>
                           </div>
-                        )}
                       </div>
                     ) : (
                       /* Show the Year below the timeline for top items */
@@ -365,40 +327,9 @@ const HistoryVariant6 = () => {
       <div className="block md:hidden py-8 px-4">
         <div className="max-w-md mx-auto space-y-6">
           {timelineData.map((item, index) => {
-            const isGoldenJubilee = item.image === milestone;
-            return isGoldenJubilee ? (
+            return (
               <div
-                key={index}
-                className="bg-white border border-gray-200 rounded-2xl shadow-lg overflow-hidden p-4 flex flex-col min-h-[380px]"
-                data-aos="fade-up"
-              >
-                <div className="flex items-center justify-center gap-3 mb-2 flex-shrink-0">
-                  <div
-                    className="w-4 h-4 rounded-full border-3 border-white shadow-sm flex-shrink-0"
-                    style={{ background: item.color }}
-                  />
-                  <div
-                    className="text-lg font-extrabold font-serif"
-                    style={{ color: item.color }}
-                  >
-                    {item.year}
-                  </div>
-                </div>
-
-                <div className="w-full h-[230px] bg-gray-50 rounded-xl overflow-hidden p-1 flex items-center justify-center border border-gray-100 shadow-inner mb-3 flex-shrink-0">
-                  <img
-                    src={item.image}
-                    alt="SSPL Golden Jubilee"
-                    className="w-full h-full object-contain"
-                  />
-                </div>
-                <p className="text-xs text-black leading-relaxed text-center flex-1 font-medium">
-                  {item.description}
-                </p>
-              </div>
-            ) : (
-              <div
-                key={index}
+                key={item.year}
                 className="bg-white border border-gray-200 rounded-2xl shadow-lg overflow-hidden min-h-[380px] flex flex-col"
                 data-aos="fade-up"
               >
