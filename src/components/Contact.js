@@ -16,7 +16,7 @@ const products = [
 ];
 
 // Web3Forms Access Key
-const WEB3FORMS_ACCESS_KEY = "c8589e9e-763b-4922-b2f3-8b952f1d511e";
+const WEB3FORMS_ACCESS_KEY = "3743fee6-67bf-4ea2-b90d-e6f5d4b81dcc";
 
 function Contact() {
   const [formData, setFormData] = useState({
